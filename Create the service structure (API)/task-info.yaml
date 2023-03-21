@@ -279,6 +279,21 @@ files:
         implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.0.Final'
     }
   learner_created: false
-feedback_link: https://hyperskill.org/projects/217/stages/1086/implement#comment
-status: Unchecked
+- name: src/account/controllers/HomeController.java
+  visible: true
+  learner_created: true
+- name: src/account/models/User.java
+  visible: true
+  learner_created: true
+- name: src/account/dto/UserDto.java
+  visible: true
+  learner_created: true
+- name: src/account/config/ModelMapperConfig.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/16601#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 21 Mar 2023 15:16:11 UTC"
 record: -1

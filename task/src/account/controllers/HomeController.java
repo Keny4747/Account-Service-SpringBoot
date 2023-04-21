@@ -2,34 +2,39 @@ package account.controllers;
 
 import account.dto.UserDto;
 import account.models.User;
-import account.service.UserDetailsServiceImpl;
+import account.repository.UserRepository;
+import account.service.UserService;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
 public class HomeController {
 
-    private final UserDetailsServiceImpl userDetailsService;
-
-    public HomeController(UserDetailsServiceImpl userDetailsService) {
-        this.userDetailsService = userDetailsService;
-    }
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/auth/signup")
-    public ResponseEntity<?> signUp(@Valid @RequestBody User user){
-        var user1 =  userDetailsService.saveUser(user);
-        return ResponseEntity.ok(UserDto.mapToUserDTO(user1));
+    public ResponseEntity<UserDto> signUp(@Valid @RequestBody User user) {
+
+        UserDto userDto = new ModelMapper().map(user, UserDto.class);
+        userService.addUser(user);
+        return ResponseEntity.ok(userDto);
     }
+
     @GetMapping("/empl/payment")
-    public ResponseEntity<?> getUser(@AuthenticationPrincipal UserDetails userDetails){
-        var user = userDetailsService.getAllPayment(userDetails.getUsername());
-        return ResponseEntity.ok(UserDto.mapToUserDTO(user));
+    public ResponseEntity<String> greetings() {
+        return ResponseEntity.ok("Good Bye and see you later");
+    }
+
+
+    @GetMapping("/get")
+    public List<User> list() {
+        return userService.getAll();
     }
 }

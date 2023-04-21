@@ -14,7 +14,4 @@ public class UserDto {
     private String lastname;
     private String email;
 
-    public static UserDto mapToUserDTO(User user){
-        return new UserDto(user.getId(), user.getName(), user.getLastname(), user.getEmail());
-    }
 }

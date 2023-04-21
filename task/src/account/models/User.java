@@ -15,11 +15,9 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "\"user\"")
 public class User {
     @Id
-    @GeneratedValue(generator = "increment")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
@@ -37,4 +35,6 @@ public class User {
 
     @NotBlank
     private String password;
+
+    private String roles;
 }

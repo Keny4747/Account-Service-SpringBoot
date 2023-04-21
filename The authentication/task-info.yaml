@@ -399,15 +399,6 @@ files:
         }
     }
   learner_created: true
-- name: src/account/config/ModelMapperConfig.java
-  visible: true
-  text: |
-    package account.config;
-
-    public class ModelMapperConfig {
-
-    }
-  learner_created: true
 - name: src/account/dto/UserDto.java
   visible: true
   text: |
@@ -458,19 +449,25 @@ files:
         private String password;
     }
   learner_created: true
-- name: src/account/service/UserDetailsImpl.java
-  visible: true
-  learner_created: true
-- name: src/account/service/UserDetailsServiceImpl.java
-  visible: true
-  learner_created: true
 - name: src/account/repository/UserRepository.java
   visible: true
   learner_created: true
 - name: src/account/config/GlobalSecurity.java
   visible: true
   learner_created: true
-- name: src/account/config/RestAuthenticationEntryPoint.java
+- name: src/account/config/UserInfoUserDetails.java
+  visible: true
+  learner_created: true
+- name: src/account/config/UserInfoUserDetailsService.java
+  visible: true
+  learner_created: true
+- name: src/account/service/UserService.java
+  visible: true
+  learner_created: true
+- name: src/account/config/ResAuthenticationEntryPoint.java
+  visible: true
+  learner_created: true
+- name: src/account/errors/CustomControllerAdvice.java
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16602#comment
@@ -483,10 +480,10 @@ feedback:
 
     Full JSON:
     {
-      &quot;timestamp&quot;: &quot;2023-04-14T18:18:50.412+00:00&quot;,
+      &quot;timestamp&quot;: &quot;2023-04-14T22:43:38.689+00:00&quot;,
       &quot;status&quot;: 400,
       &quot;error&quot;: &quot;Bad Request&quot;,
       &quot;path&quot;: &quot;/api/auth/signup&quot;
     }
-  time: "Fri, 14 Apr 2023 18:18:51 UTC"
+  time: "Fri, 14 Apr 2023 22:43:39 UTC"
 record: -1

@@ -1,34 +1,37 @@
 package account.service;
 
-import account.models.User;
-import account.repository.UserRepository;
+import account.errors.EmailExistError;
+import account.errors.UnauthorizedError;
+import account.models.UserInfo;
+import account.repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
     @Autowired
-    private UserRepository repository;
+    private UserInfoRepository repository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public User addUser(User user){
-
-        if(repository.existsByName(user.getName())){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User exist!");
+    public UserInfo addUser(UserInfo userInfo) {
+        if(repository.findByEmailIgnoreCase(userInfo.getEmail()).isPresent()){
+            throw new EmailExistError("User exist!");
         }
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return repository.save(user);
+        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
+        return repository.save(userInfo);
     }
 
-    public List<User> getAll(){
-        return repository.findAll();
+    public Optional<UserInfo> getUser(String username){
+       Optional<UserInfo> user  = repository.findByName(username);
+       if(user.isEmpty()){
+           throw new UnauthorizedError("");
+       }
+        return user;
     }
 
 }

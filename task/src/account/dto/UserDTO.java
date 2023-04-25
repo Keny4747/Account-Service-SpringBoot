@@ -1,6 +1,6 @@
 package account.dto;
 
-import account.models.User;
+import account.models.UserInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,10 +8,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDto {
+public class UserDTO {
     private Long id;
     private String name;
     private String lastname;
     private String email;
+
+
 
 }

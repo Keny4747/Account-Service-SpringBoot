@@ -399,60 +399,19 @@ files:
         }
     }
   learner_created: true
-- name: src/account/dto/UserDto.java
-  visible: true
-  text: |
-    package account.dto;
-
-    import lombok.AllArgsConstructor;
-    import lombok.Data;
-    import lombok.NoArgsConstructor;
-
-    @Data
-    @AllArgsConstructor
-    @NoArgsConstructor
-    public class UserDto {
-        private String name;
-        private String lastname;
-        private String email;
-    }
-  learner_created: true
-- name: src/account/models/User.java
-  visible: true
-  text: |
-    package account.models;
-
-    import com.fasterxml.jackson.annotation.JsonProperty;
-    import lombok.AllArgsConstructor;
-    import lombok.Data;
-    import lombok.NoArgsConstructor;
-
-    import javax.validation.constraints.Email;
-    import javax.validation.constraints.NotBlank;
-    import javax.validation.constraints.NotNull;
-    @Data
-    @AllArgsConstructor
-    @NoArgsConstructor
-    public class User {
-
-        @NotBlank
-        private String name;
-
-        @NotBlank
-        private String lastname;
-
-        @NotBlank
-        @Email(regexp = "^[a-zA-Z0-9._%+-]+@acme\\.com$")
-        private String email;
-
-        @NotBlank
-        private String password;
-    }
-  learner_created: true
-- name: src/account/repository/UserRepository.java
+- name: src/account/service/UserService.java
   visible: true
   learner_created: true
-- name: src/account/config/GlobalSecurity.java
+- name: src/account/errors/CustomControllerAdvice.java
+  visible: true
+  learner_created: true
+- name: src/account/models/UserInfo.java
+  visible: true
+  learner_created: true
+- name: src/account/repository/UserInfoRepository.java
+  visible: true
+  learner_created: true
+- name: src/account/config/SecurityConfig.java
   visible: true
   learner_created: true
 - name: src/account/config/UserInfoUserDetails.java
@@ -461,29 +420,29 @@ files:
 - name: src/account/config/UserInfoUserDetailsService.java
   visible: true
   learner_created: true
-- name: src/account/service/UserService.java
+- name: src/account/dto/UserDTO.java
+  visible: true
+  learner_created: true
+- name: src/account/errors/EmailExistError.java
+  visible: true
+  learner_created: true
+- name: src/account/errors/CustomErrorMessage.java
+  visible: true
+  learner_created: true
+- name: src/account/errors/UnauthorizedError.java
   visible: true
   learner_created: true
 - name: src/account/config/ResAuthenticationEntryPoint.java
-  visible: true
-  learner_created: true
-- name: src/account/errors/CustomControllerAdvice.java
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16602#comment
 status: Failed
 feedback:
   message: |-
-    Wrong answer in test #3
+    Wrong answer in test #18
 
-    The JSON object should contain a key &quot;message&quot;
-
-    Full JSON:
-    {
-      &quot;timestamp&quot;: &quot;2023-04-14T22:43:38.689+00:00&quot;,
-      &quot;status&quot;: 400,
-      &quot;error&quot;: &quot;Bad Request&quot;,
-      &quot;path&quot;: &quot;/api/auth/signup&quot;
-    }
-  time: "Fri, 14 Apr 2023 22:43:39 UTC"
+    Get /api/empl/payment should respond with status code 200, responded: 401
+    User must login!
+    Authentication with johndoe@acme.com / secret
+  time: "Tue, 25 Apr 2023 04:07:29 UTC"
 record: -1

@@ -12,18 +12,18 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-//david wanga
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 @EnableWebSecurity
-public class GlobalSecurity {
+public class SecurityConfig {
 
     @Bean
-    //authentication
     public UserDetailsService userDetailsService() {
         /*UserDetails admin = User.withUsername("Keny")
                 .password(encoder.encode("12345"))
                 .roles("ADMIN")
                 .build();
+
         UserDetails user = User.withUsername("John")
                 .password(encoder.encode("12345"))
                 .roles("USER")
@@ -34,23 +34,40 @@ public class GlobalSecurity {
         return new UserInfoUserDetailsService();
     }
 
+    //Authorization
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
+        /*return http.csrf().disable()
+                .authorizeRequests()
+                .requestMatchers(
+                        new AntPathRequestMatcher("/api/hello"),
+                        new AntPathRequestMatcher("/api/auth/signup")
+                ).permitAll()
+                .and()
+                .authorizeRequests()
+                .requestMatchers(
+                        new AntPathRequestMatcher("/api/**")
+                ).authenticated()
+                .and()
+                .formLogin()
+                .and()
+                .build();
+
+         */
         http.httpBasic()
                 .authenticationEntryPoint(new ResAuthenticationEntryPoint()) // Handle auth error
                 .and()
                 .csrf().disable().headers().frameOptions().disable() // for Postman, the H2 console
                 .and()
                 .authorizeRequests() // manage access
-                .antMatchers(HttpMethod.POST, "/api/auth/signup/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/empl/payment/**").authenticated()
-                .and()
-                .formLogin()
+                .antMatchers(HttpMethod.POST, "/api/auth/signup").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/empl/payment").authenticated()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         return http.build();
+
     }
 
     @Bean

@@ -1,40 +1,38 @@
 package account.controllers;
 
-import account.dto.UserDto;
-import account.models.User;
-import account.repository.UserRepository;
+import account.dto.UserDTO;
+import account.models.UserInfo;
 import account.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
 public class HomeController {
 
     @Autowired
-    private UserService userService;
+    private UserService userservice;
+
 
     @PostMapping("/auth/signup")
-    public ResponseEntity<UserDto> signUp(@Valid @RequestBody User user) {
+    public ResponseEntity<UserDTO> addNewUser(@Valid @RequestBody UserInfo userInfo) {
+        UserDTO userDTO = new ModelMapper().map(userservice.addUser(userInfo), UserDTO.class);
 
-        UserDto userDto = new ModelMapper().map(user, UserDto.class);
-        userService.addUser(user);
-        return ResponseEntity.ok(userDto);
+        return ResponseEntity.ok(userDTO);
     }
 
     @GetMapping("/empl/payment")
-    public ResponseEntity<String> greetings() {
-        return ResponseEntity.ok("Good Bye and see you later");
-    }
+    public ResponseEntity<UserDTO> getInfo(@AuthenticationPrincipal UserDetails details) {
+        Optional<UserInfo> user = userservice.getUser(details.getUsername());
 
 
-    @GetMapping("/get")
-    public List<User> list() {
-        return userService.getAll();
+        return ResponseEntity.ok(new ModelMapper().map(user,UserDTO.class));
     }
+
 }

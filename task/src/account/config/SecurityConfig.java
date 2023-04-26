@@ -5,8 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -37,8 +39,11 @@ public class SecurityConfig {
     //Authorization
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+/*
+        return http.csrf().disable()
 
-        /*return http.csrf().disable()
+                .headers().frameOptions().disable()
+                .and()
                 .authorizeRequests()
                 .requestMatchers(
                         new AntPathRequestMatcher("/api/hello"),
@@ -47,26 +52,33 @@ public class SecurityConfig {
                 .and()
                 .authorizeRequests()
                 .requestMatchers(
-                        new AntPathRequestMatcher("/api/**")
+                        new AntPathRequestMatcher("/api/empl/payment"),
+                        new AntPathRequestMatcher("/api/all")
                 ).authenticated()
                 .and()
-                .formLogin()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .build();
 
-         */
-        http.httpBasic()
+ */
+
+        return http.httpBasic()
                 .authenticationEntryPoint(new ResAuthenticationEntryPoint()) // Handle auth error
                 .and()
                 .csrf().disable().headers().frameOptions().disable() // for Postman, the H2 console
                 .and()
                 .authorizeRequests() // manage access
-                .antMatchers(HttpMethod.POST, "/api/auth/signup").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/empl/payment").authenticated()
+                .antMatchers(HttpMethod.POST, "/api/auth/signup","/actuator/shutdown").permitAll()
+                .antMatchers(HttpMethod.GET,"7api/empl/payment")
+                .authenticated()
+                // other matchers
                 .and()
                 .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        return http.build();
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .build(); // no session
+
 
     }
 

@@ -1,41 +1,31 @@
 package account.service;
 
-import account.errors.EmailExistError;
-import account.errors.UnauthorizedError;
-import account.models.UserInfo;
-import account.repository.UserInfoRepository;
+import account.entity.User;
+import account.exceptions.UserExistException;
+import account.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class UserService {
-    @Autowired
-    private UserInfoRepository repository;
+    private final UserRepository userRepository;
+
+    private final PasswordEncoder encoder;
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    public UserService(UserRepository userRepository, PasswordEncoder encoder) {
+        this.userRepository = userRepository;
+        this.encoder = encoder;
+    }
 
-    public UserInfo addUser(UserInfo userInfo) {
-        if(repository.findByEmailIgnoreCase(userInfo.getEmail()).isPresent()){
-            throw new EmailExistError("User exist!");
+    public ResponseEntity<User> registerAccount(User user) {
+        if (userRepository.existsUserByEmailIgnoreCase(user.getEmail())) {
+            throw new UserExistException();
         }
-        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
-        return repository.save(userInfo);
+        user.setPassword(encoder.encode(user.getPassword()));
+        userRepository.save(user);
+        return ResponseEntity.ok(user);
     }
-
-    public UserInfo getUser(String username){
-       UserInfo user  = repository.findByName(username);
-       if(user==null){
-           throw new UnauthorizedError("");
-       }
-        return user;
-    }
-
-    public List<UserInfo> getAll(){
-        return repository.findAll();
-    }
-
 }

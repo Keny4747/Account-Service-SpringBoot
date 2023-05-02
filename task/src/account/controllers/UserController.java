@@ -12,6 +12,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -31,11 +32,13 @@ public class UserController {
     }
 
     @PostMapping("/changepass")
-    public PasswordResponse  changePassword(@Valid @RequestBody NewPassword newPassword,@AuthenticationPrincipal UserDetailsImpl userDetails) {
+    public PasswordResponse  changePassword(@AuthenticationPrincipal UserDetailsImpl userDetails, @Valid @RequestBody NewPassword newPassword) {
 
         return  userService.changePassword(newPassword, userDetails);
-
-
     }
 
+    @GetMapping("/all")
+    public List<User> getAll( ){
+        return userService.getAllUser();
+    }
 }

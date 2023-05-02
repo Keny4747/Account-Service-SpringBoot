@@ -11,9 +11,11 @@ import account.repository.UserRepository;
 import account.security.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -50,11 +52,19 @@ public class UserService {
 
         User user = userRepository.findByEmail(userDetails.getUsername());
 
+
         if(encoder.matches(newPassword.getNewPassword(),user.getPassword())){
             throw new PasswordsNotDifferentException("The passwords must be different!");
         }
 
+        user.setPassword(encoder.encode(newPassword.getNewPassword()));
+        userRepository.save(user);
+
+
         return new PasswordResponse(user.getEmail(),"The password has been updated successfully");
     }
 
+    public List<User> getAllUser(){
+        return userRepository.findAll();
+    }
 }

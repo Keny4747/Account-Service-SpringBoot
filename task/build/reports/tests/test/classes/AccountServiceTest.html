@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">13.991s</div>
+<div class="counter">12.227s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@ POST /api/auth/changepass should respond with status code 401, responded: 500
 This api only for authenticated user
 Response body:
 {
-  &quot;timestamp&quot; : &quot;2023-05-02T05:43:09.823+00:00&quot;,
+  &quot;timestamp&quot; : &quot;2023-05-02T17:01:41.815+00:00&quot;,
   &quot;status&quot; : 500,
   &quot;error&quot; : &quot;Internal Server Error&quot;,
   &quot;message&quot; : &quot;Cannot invoke \&quot;account.security.UserDetailsImpl.getUsername()\&quot; because \&quot;userDetails\&quot; is null&quot;,
@@ -152,7 +152,7 @@ Request body:
 </thead>
 <tr>
 <td class="failures">start</td>
-<td class="failures">13.991s</td>
+<td class="failures">12.227s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -171,35 +171,35 @@ Start test 1?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v2.5.5)
 ?[0m?[0;34m
-?[0m?[0;34m2023-05-02 00:42:57.113  INFO 2484 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 2484 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
-?[0m?[0;34m2023-05-02 00:42:57.118  INFO 2484 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-?[0m?[0;34m2023-05-02 00:42:58.128  INFO 2484 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2023-05-02 00:42:58.194  INFO 2484 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
-?[0m?[0;34m2023-05-02 00:42:58.898  INFO 2484 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-?[0m?[0;34m2023-05-02 00:42:58.911  INFO 2484 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2023-05-02 00:42:58.911  INFO 2484 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-?[0m?[0;34m2023-05-02 00:42:59.007  INFO 2484 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2023-05-02 00:42:59.007  INFO 2484 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1824 ms
-?[0m?[0;34m2023-05-02 00:42:59.316  INFO 2484 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2023-05-02 00:42:59.371  INFO 2484 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-?[0m?[0;34m2023-05-02 00:42:59.527  INFO 2484 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-?[0m?[0;34m2023-05-02 00:42:59.649  INFO 2484 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-?[0m?[0;34m2023-05-02 00:42:59.927  INFO 2484 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-?[0m?[0;34m2023-05-02 00:42:59.939  INFO 2484 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-05-02 12:01:30.388  INFO 808 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 808 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
+?[0m?[0;34m2023-05-02 12:01:30.390  INFO 808 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-05-02 12:01:31.341  INFO 808 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-05-02 12:01:31.398  INFO 808 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-05-02 12:01:32.015  INFO 808 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-05-02 12:01:32.027  INFO 808 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-05-02 12:01:32.027  INFO 808 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+?[0m?[0;34m2023-05-02 12:01:32.123  INFO 808 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-05-02 12:01:32.123  INFO 808 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1690 ms
+?[0m?[0;34m2023-05-02 12:01:32.415  INFO 808 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-05-02 12:01:32.472  INFO 808 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+?[0m?[0;34m2023-05-02 12:01:32.627  INFO 808 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[0m?[0;34m2023-05-02 12:01:32.760  INFO 808 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2023-05-02 12:01:32.903  INFO 808 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2023-05-02 12:01:32.918  INFO 808 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 ?[0m?[0;34mHibernate: create table users (id_user bigint not null, email varchar(255) not null, lastname varchar(255) not null, name varchar(255) not null, password varchar(255) not null, primary key (id_user))
 ?[0m?[0;34mHibernate: alter table users drop constraint if exists UK_6dotkott2kjsp8vw4d0m25fb7
 ?[0m?[0;34mHibernate: alter table users add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
 ?[0m?[0;34mHibernate: create sequence hibernate_sequence start with 1 increment by 1
-?[0m?[0;34m2023-05-02 00:43:00.629  INFO 2484 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2023-05-02 00:43:00.638  INFO 2484 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-05-02 00:43:01.500  INFO 2484 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d2ff73a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f5f4d48, org.springframework.security.web.header.HeaderWriterFilter@78c5ef58, org.springframework.security.web.authentication.logout.LogoutFilter@71c74011, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6e4bccc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c8e096, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20b921be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@736a8aea, org.springframework.security.web.session.SessionManagementFilter@1a06ec24, org.springframework.security.web.access.ExceptionTranslationFilter@58c80957, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2dc77962]
-?[0m?[0;34m2023-05-02 00:43:01.586  WARN 2484 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2023-05-02 00:43:02.276  INFO 2484 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2023-05-02 00:43:02.329  INFO 2484 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-?[0m?[0;34m2023-05-02 00:43:02.346  INFO 2484 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 5.717 seconds (JVM running for 7.062)
-?[0;34m2023-05-02 00:43:03.081  INFO 2484 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-02 00:43:03.081  INFO 2484 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-02 00:43:03.083  INFO 2484 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34m2023-05-02 12:01:33.569  INFO 808 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-05-02 12:01:33.582  INFO 808 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-05-02 12:01:34.129  INFO 808 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@590f806a, org.springframework.security.web.context.SecurityContextPersistenceFilter@28551755, org.springframework.security.web.header.HeaderWriterFilter@26f07261, org.springframework.security.web.authentication.logout.LogoutFilter@242c4a94, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@789f5552, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@220a5163, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b8b9b2d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2267b0bb, org.springframework.security.web.session.SessionManagementFilter@4d22265c, org.springframework.security.web.access.ExceptionTranslationFilter@351fadfa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@695c8b32]
+?[0m?[0;34m2023-05-02 12:01:34.204  WARN 808 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-05-02 12:01:34.731  INFO 808 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-05-02 12:01:34.769  INFO 808 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-05-02 12:01:34.781  INFO 808 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 4.742 seconds (JVM running for 5.765)
+?[0;34m2023-05-02 12:01:35.101  INFO 808 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-02 12:01:35.102  INFO 808 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-02 12:01:35.105  INFO 808 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 ?[0m?[1;31m
 Start test 2?[0m
 ?[1;31m
@@ -293,11 +293,11 @@ Start test 26?[0m
 Start test 27?[0m
 ?[1;31m
 Start test 28?[0m
-?[0m?[0;34m2023-05-02 00:43:09.816 ERROR 2484 --- [io-28852-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke &quot;account.security.UserDetailsImpl.getUsername()&quot; because &quot;userDetails&quot; is null] with root cause
+?[0m?[0;34m2023-05-02 12:01:41.805 ERROR 808 --- [io-28852-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke &quot;account.security.UserDetailsImpl.getUsername()&quot; because &quot;userDetails&quot; is null] with root cause
 ?[0m?[0;34m
 ?[0m?[0;34mjava.lang.NullPointerException: Cannot invoke &quot;account.security.UserDetailsImpl.getUsername()&quot; because &quot;userDetails&quot; is null
-?[0m?[0;34m	at account.service.UserService.changePassword(UserService.java:51) ~[main/:na]
-?[0m?[0;34m	at account.controllers.UserController.changePassword(UserController.java:36) ~[main/:na]
+?[0m?[0;34m	at account.service.UserService.changePassword(UserService.java:53) ~[main/:na]
+?[0m?[0;34m	at account.controllers.UserController.changePassword(UserController.java:37) ~[main/:na]
 ?[0m?[0;34m	at account.controllers.UserController$$FastClassBySpringCGLIB$$dd22e8bf.invoke(&lt;generated&gt;) ~[main/:na]
 ?[0m?[0;34m	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.10.jar:5.3.10]
 ?[0m?[0;34m	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.10.jar:5.3.10]
@@ -307,7 +307,7 @@ Start test 28?[0m
 ?[0m?[0;34m	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.10.jar:5.3.10]
 ?[0m?[0;34m	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.10.jar:5.3.10]
 ?[0m?[0;34m	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at account.controllers.UserController$$EnhancerBySpringCGLIB$$11572fa0.changePassword(&lt;generated&gt;) ~[main/:na]
+?[0m?[0;34m	at account.controllers.UserController$$EnhancerBySpringCGLIB$$8d3ecc24.changePassword(&lt;generated&gt;) ~[main/:na]
 ?[0m?[0;34m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 ?[0m?[0;34m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 ?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -482,7 +482,7 @@ Start test 28?[0m
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 2 may 2023 0:43:10</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 2 may 2023 12:01:42</p>
 </div>
 </div>
 </body>

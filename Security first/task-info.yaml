@@ -898,6 +898,9 @@ files:
 - name: src/account/exceptions/error/PasswordsNotDifferentException.java
   visible: true
   learner_created: true
+- name: src/account/exceptions/UnauthorizedException.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16603#comment
 status: Failed
 feedback:
@@ -908,7 +911,7 @@ feedback:
     This api only for authenticated user
     Response body:
     {
-      &quot;timestamp&quot; : &quot;2023-05-02T05:43:09.823+00:00&quot;,
+      &quot;timestamp&quot; : &quot;2023-05-02T17:01:41.815+00:00&quot;,
       &quot;status&quot; : 500,
       &quot;error&quot; : &quot;Internal Server Error&quot;,
       &quot;message&quot; : &quot;Cannot invoke \&quot;account.security.UserDetailsImpl.getUsername()\&quot; because \&quot;userDetails\&quot; is null&quot;,
@@ -916,5 +919,5 @@ feedback:
     }
     Request body:
     {&quot;new_password&quot;:&quot;oMoa3VvqnLxW&quot;}
-  time: "Tue, 02 May 2023 05:43:11 UTC"
+  time: "Tue, 02 May 2023 17:01:42 UTC"
 record: 3

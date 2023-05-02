@@ -42,7 +42,7 @@ public class User {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotEmpty(message = "password required")
     @Column(name = "password", nullable = false)
-    @Size(min = 12, message = "The password length must be at least 12 chars!")
+    @Size(min = 12, message ="The password length must be at least 12 chars!")
     private String password;
 
     @Override

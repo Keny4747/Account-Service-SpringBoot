@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">11.853s</div>
+<div class="counter">44.076s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,86 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="start"></a>
-<h3 class="failures">start</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Wrong answer in test #28
-
-POST /api/auth/changepass should respond with status code 401, responded: 500
-This api only for authenticated user
-Response body:
-{
-  &quot;timestamp&quot; : &quot;2023-05-02T17:12:17.363+00:00&quot;,
-  &quot;status&quot; : 500,
-  &quot;error&quot; : &quot;Internal Server Error&quot;,
-  &quot;message&quot; : &quot;Cannot invoke \&quot;account.security.UserDetailsImpl.getUsername()\&quot; because \&quot;userDetails\&quot; is null&quot;,
-  &quot;path&quot; : &quot;/api/auth/changepass&quot;
-}
-Request body:
-{&quot;new_password&quot;:&quot;oMoa3VvqnLxW&quot;}
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -151,13 +78,13 @@ Request body:
 </tr>
 </thead>
 <tr>
-<td class="failures">start</td>
-<td class="failures">11.853s</td>
-<td class="failures">failed</td>
+<td class="success">start</td>
+<td class="success">44.076s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
@@ -171,35 +98,35 @@ Start test 1?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v2.5.5)
 ?[0m?[0;34m
-?[0m?[0;34m2023-05-02 12:12:06.287  INFO 10392 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 10392 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
-?[0m?[0;34m2023-05-02 12:12:06.291  INFO 10392 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-?[0m?[0;34m2023-05-02 12:12:07.243  INFO 10392 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2023-05-02 12:12:07.302  INFO 10392 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interfaces.
-?[0m?[0;34m2023-05-02 12:12:07.996  INFO 10392 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-?[0m?[0;34m2023-05-02 12:12:08.007  INFO 10392 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2023-05-02 12:12:08.008  INFO 10392 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-?[0m?[0;34m2023-05-02 12:12:08.107  INFO 10392 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2023-05-02 12:12:08.107  INFO 10392 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1769 ms
-?[0m?[0;34m2023-05-02 12:12:08.396  INFO 10392 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2023-05-02 12:12:08.447  INFO 10392 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-?[0m?[0;34m2023-05-02 12:12:08.604  INFO 10392 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-?[0m?[0;34m2023-05-02 12:12:08.726  INFO 10392 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-?[0m?[0;34m2023-05-02 12:12:08.891  INFO 10392 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-?[0m?[0;34m2023-05-02 12:12:08.906  INFO 10392 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-05-02 15:07:01.225  INFO 11024 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 11024 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
+?[0m?[0;34m2023-05-02 15:07:01.229  INFO 11024 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-05-02 15:07:02.159  INFO 11024 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-05-02 15:07:02.221  INFO 11024 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-05-02 15:07:02.863  INFO 11024 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-05-02 15:07:02.874  INFO 11024 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-05-02 15:07:02.875  INFO 11024 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+?[0m?[0;34m2023-05-02 15:07:02.980  INFO 11024 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-05-02 15:07:02.980  INFO 11024 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1704 ms
+?[0m?[0;34m2023-05-02 15:07:03.297  INFO 11024 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-05-02 15:07:03.357  INFO 11024 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+?[0m?[0;34m2023-05-02 15:07:03.517  INFO 11024 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[0m?[0;34m2023-05-02 15:07:03.649  INFO 11024 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2023-05-02 15:07:03.812  INFO 11024 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2023-05-02 15:07:03.831  INFO 11024 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 ?[0m?[0;34mHibernate: create table users (id_user bigint not null, email varchar(255) not null, lastname varchar(255) not null, name varchar(255) not null, password varchar(255) not null, primary key (id_user))
 ?[0m?[0;34mHibernate: alter table users drop constraint if exists UK_6dotkott2kjsp8vw4d0m25fb7
 ?[0m?[0;34mHibernate: alter table users add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
 ?[0m?[0;34mHibernate: create sequence hibernate_sequence start with 1 increment by 1
-?[0m?[0;34m2023-05-02 12:12:09.579  INFO 10392 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2023-05-02 12:12:09.589  INFO 10392 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-05-02 12:12:10.129  INFO 10392 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@206e5183, org.springframework.security.web.context.SecurityContextPersistenceFilter@16c1345b, org.springframework.security.web.header.HeaderWriterFilter@1f381eaf, org.springframework.security.web.authentication.logout.LogoutFilter@3d9cba2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1372696b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c41931a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fca9fae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@325236f5, org.springframework.security.web.session.SessionManagementFilter@36c1b6ff, org.springframework.security.web.access.ExceptionTranslationFilter@68838767, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1be3a294]
-?[0m?[0;34m2023-05-02 12:12:10.182  WARN 10392 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2023-05-02 12:12:10.693  INFO 10392 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2023-05-02 12:12:10.731  INFO 10392 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-?[0m?[0;34m2023-05-02 12:12:10.744  INFO 10392 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 4.808 seconds (JVM running for 5.69)
-?[0;34m2023-05-02 12:12:11.046  INFO 10392 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-02 12:12:11.046  INFO 10392 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-02 12:12:11.048  INFO 10392 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34m2023-05-02 15:07:04.537  INFO 11024 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-05-02 15:07:04.546  INFO 11024 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-05-02 15:07:05.176  INFO 11024 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1be3a294, org.springframework.security.web.context.SecurityContextPersistenceFilter@60739eca, org.springframework.security.web.header.HeaderWriterFilter@47d4468a, org.springframework.security.web.authentication.logout.LogoutFilter@61c0fb12, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@231c521e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17873842, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f381eaf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33502cfe, org.springframework.security.web.session.SessionManagementFilter@7833407, org.springframework.security.web.access.ExceptionTranslationFilter@1399ad68, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49741e80]
+?[0m?[0;34m2023-05-02 15:07:05.235  WARN 11024 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-05-02 15:07:05.787  INFO 11024 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-05-02 15:07:05.847  INFO 11024 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-05-02 15:07:05.861  INFO 11024 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 5.011 seconds (JVM running for 5.894)
+?[0;34m2023-05-02 15:07:06.186  INFO 11024 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-02 15:07:06.187  INFO 11024 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-02 15:07:06.189  INFO 11024 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 ?[0m?[1;31m
 Start test 2?[0m
 ?[1;31m
@@ -293,184 +220,131 @@ Start test 26?[0m
 Start test 27?[0m
 ?[1;31m
 Start test 28?[0m
-?[0m?[0;34m2023-05-02 12:12:17.355 ERROR 10392 --- [io-28852-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke &quot;account.security.UserDetailsImpl.getUsername()&quot; because &quot;userDetails&quot; is null] with root cause
+?[1;31m
+Start test 29?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 30?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where user0_.email=?
+?[1;31m
+Start test 31?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 32?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 33?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 34?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 35?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 36?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 37?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 38?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 39?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 40?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 41?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 42?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where user0_.email=?
+?[1;31m
+Start test 43?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 44?[0m
+?[0;34m2023-05-02 15:07:25.946  INFO 11024 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-05-02 15:07:25.947  INFO 11024 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2023-05-02 15:07:26.223  INFO 11024 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.5.5)
 ?[0m?[0;34m
-?[0m?[0;34mjava.lang.NullPointerException: Cannot invoke &quot;account.security.UserDetailsImpl.getUsername()&quot; because &quot;userDetails&quot; is null
-?[0m?[0;34m	at account.service.UserService.changePassword(UserService.java:54) ~[main/:na]
-?[0m?[0;34m	at account.controllers.UserController.changePassword(UserController.java:37) ~[main/:na]
-?[0m?[0;34m	at account.controllers.UserController$$FastClassBySpringCGLIB$$dd22e8bf.invoke(&lt;generated&gt;) ~[main/:na]
-?[0m?[0;34m	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123) ~[spring-context-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at account.controllers.UserController$$EnhancerBySpringCGLIB$$12f24d18.changePassword(&lt;generated&gt;) ~[main/:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-?[0m?[0;34m	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-?[0m?[0;34m	at jdk.internal.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.lambda$execute$0(SecurityUtil.java:280) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-?[0m?[0;34m	at java.base/javax.security.auth.Subject.doAsPrivileged(Subject.java:584) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:311) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:170) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:221) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.lambda$doFilter$0(ApplicationFilterChain.java:145) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:143) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.lambda$execute$0(SecurityUtil.java:280) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-?[0m?[0;34m	at java.base/javax.security.auth.Subject.doAsPrivileged(Subject.java:584) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:311) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:253) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:187) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.lambda$doFilter$0(ApplicationFilterChain.java:145) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:143) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.2.jar:5.5.2]
-?[0m?[0;34m	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.lambda$execute$0(SecurityUtil.java:280) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-?[0m?[0;34m	at java.base/javax.security.auth.Subject.doAsPrivileged(Subject.java:584) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:311) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:253) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:187) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.lambda$doFilter$0(ApplicationFilterChain.java:145) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:143) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.lambda$execute$0(SecurityUtil.java:280) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-?[0m?[0;34m	at java.base/javax.security.auth.Subject.doAsPrivileged(Subject.java:584) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:311) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:253) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:187) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.lambda$doFilter$0(ApplicationFilterChain.java:145) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:143) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.lambda$execute$0(SecurityUtil.java:280) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-?[0m?[0;34m	at java.base/javax.security.auth.Subject.doAsPrivileged(Subject.java:584) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:311) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:253) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:187) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.lambda$doFilter$0(ApplicationFilterChain.java:145) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:143) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.5.jar:2.5.5]
-?[0m?[0;34m	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.lambda$execute$0(SecurityUtil.java:280) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-?[0m?[0;34m	at java.base/javax.security.auth.Subject.doAsPrivileged(Subject.java:584) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:311) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:253) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:187) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.lambda$doFilter$0(ApplicationFilterChain.java:145) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:143) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-?[0m?[0;34m	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source) ~[na:na]
-?[0m?[0;34m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-?[0m?[0;34m	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.lambda$execute$0(SecurityUtil.java:280) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-?[0m?[0;34m	at java.base/javax.security.auth.Subject.doAsPrivileged(Subject.java:584) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:311) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:253) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:187) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.lambda$doFilter$0(ApplicationFilterChain.java:145) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569) ~[na:na]
-?[0m?[0;34m	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:143) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-?[0m?[0;34m	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-?[0m?[0;34m
+?[0m?[0;34m2023-05-02 15:07:36.447  INFO 11024 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 11024 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
+?[0m?[0;34m2023-05-02 15:07:36.447  INFO 11024 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-05-02 15:07:36.698  INFO 11024 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-05-02 15:07:36.704  INFO 11024 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-05-02 15:07:36.794  INFO 11024 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-05-02 15:07:36.795  INFO 11024 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-05-02 15:07:36.795  INFO 11024 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+?[0m?[0;34m2023-05-02 15:07:36.832  INFO 11024 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-05-02 15:07:36.832  INFO 11024 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 382 ms
+?[0m?[0;34m2023-05-02 15:07:36.902  INFO 11024 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-05-02 15:07:36.907  INFO 11024 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2023-05-02 15:07:36.913  INFO 11024 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2023-05-02 15:07:36.913  INFO 11024 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-05-02 15:07:36.952  INFO 11024 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-05-02 15:07:36.952  INFO 11024 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-05-02 15:07:37.035  INFO 11024 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4194a77f, org.springframework.security.web.context.SecurityContextPersistenceFilter@768d8a25, org.springframework.security.web.header.HeaderWriterFilter@306f439c, org.springframework.security.web.authentication.logout.LogoutFilter@3e455d01, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5988e36e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@521032a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18a9e8db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c55e9d4, org.springframework.security.web.session.SessionManagementFilter@ac6da02, org.springframework.security.web.access.ExceptionTranslationFilter@1b87f7cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c4f48e2]
+?[0m?[0;34m2023-05-02 15:07:37.061  WARN 11024 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-05-02 15:07:37.207  INFO 11024 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-05-02 15:07:37.220  INFO 11024 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-05-02 15:07:37.226  INFO 11024 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 0.795 seconds (JVM running for 37.259)
+?[0m?[1;31m
+Start test 45?[0m
+?[0;34m2023-05-02 15:07:37.233  INFO 11024 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-02 15:07:37.234  INFO 11024 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-02 15:07:37.235  INFO 11024 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 46?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: update users set email=?, lastname=?, name=?, password=? where id_user=?
+?[1;31m
+Start test 47?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 48?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 49?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: update users set email=?, lastname=?, name=?, password=? where id_user=?
+?[1;31m
+Start test 50?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 51?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_0_, user0_.email as email2_0_, user0_.lastname as lastname3_0_, user0_.name as name4_0_, user0_.password as password5_0_ from users user0_ where upper(user0_.email)=upper(?)
 </pre>
 </span>
 </div>
@@ -482,7 +356,7 @@ Start test 28?[0m
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 2 may 2023 12:12:18</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 2 may 2023 15:07:45</p>
 </div>
 </div>
 </body>

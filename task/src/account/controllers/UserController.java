@@ -3,6 +3,7 @@ package account.controllers;
 import account.entity.NewPassword;
 import account.entity.PasswordResponse;
 import account.entity.User;
+import account.exceptions.UnauthorizedException;
 import account.security.UserDetailsImpl;
 import account.service.UserService;
 import org.springframework.http.HttpStatus;
@@ -34,6 +35,9 @@ public class UserController {
     @PostMapping("/changepass")
     public PasswordResponse  changePassword(@AuthenticationPrincipal UserDetailsImpl userDetails, @Valid @RequestBody NewPassword newPassword) {
 
+        if(userDetails == null){
+            throw new UnauthorizedException();
+        }
         return  userService.changePassword(newPassword, userDetails);
     }
 

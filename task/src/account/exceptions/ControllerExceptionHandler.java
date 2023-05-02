@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
 
 import java.time.LocalDateTime;
@@ -25,8 +26,7 @@ public class ControllerExceptionHandler {
                 LocalDateTime.now(),
                 HttpStatus.BAD_REQUEST.value(),
                 "Bad Request",
-                e.getMessage(),
-                request.getDescription(false));
+                e.getMessage());
 
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
@@ -37,9 +37,9 @@ public class ControllerExceptionHandler {
         CustomErrorMessage body = new CustomErrorMessage(
                 LocalDateTime.now(),
                 HttpStatus.BAD_REQUEST.value(),
-                "Bad Request",
+                HttpStatus.BAD_REQUEST.getReasonPhrase(),
                 e.getMessage(),
-                request.getDescription(false));
+                ((ServletWebRequest) request).getRequest().getRequestURI());
 
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
@@ -61,7 +61,7 @@ public class ControllerExceptionHandler {
                 HttpStatus.BAD_REQUEST.value(),
                 "Bad Request",
                 message,
-                request.getDescription(false));
+                ((ServletWebRequest) request).getRequest().getRequestURI());
 
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }

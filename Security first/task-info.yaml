@@ -902,22 +902,8 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16603#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #28
-
-    POST /api/auth/changepass should respond with status code 401, responded: 500
-    This api only for authenticated user
-    Response body:
-    {
-      &quot;timestamp&quot; : &quot;2023-05-02T17:12:17.363+00:00&quot;,
-      &quot;status&quot; : 500,
-      &quot;error&quot; : &quot;Internal Server Error&quot;,
-      &quot;message&quot; : &quot;Cannot invoke \&quot;account.security.UserDetailsImpl.getUsername()\&quot; because \&quot;userDetails\&quot; is null&quot;,
-      &quot;path&quot; : &quot;/api/auth/changepass&quot;
-    }
-    Request body:
-    {&quot;new_password&quot;:&quot;oMoa3VvqnLxW&quot;}
-  time: "Tue, 02 May 2023 17:12:18 UTC"
+  message: Congratulations!
+  time: "Tue, 02 May 2023 20:07:45 UTC"
 record: 3

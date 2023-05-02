@@ -42,6 +42,7 @@ public class UserService {
             throw new BreachedPasswordException("The password is in the hacker's database!");
         }
         user.setPassword(encoder.encode(user.getPassword()));
+        //user.setEmail(user.getEmail().toLowerCase());
         userRepository.save(user);
         return ResponseEntity.ok(user);
     }
@@ -64,7 +65,7 @@ public class UserService {
         userRepository.save(user);
 
 
-        return new PasswordResponse(user.getEmail(),"The password has been updated successfully");
+        return new PasswordResponse(user.getEmail().toLowerCase(),"The password has been updated successfully");
     }
 
     public List<User> getAllUser(){

@@ -877,6 +877,44 @@ files:
         }
     }
   learner_created: true
+- name: src/account/repository/BreachedPasswordsRepository.java
+  visible: true
+  learner_created: true
+- name: src/account/entity/NewPassword.java
+  visible: true
+  learner_created: true
+- name: src/account/entity/PasswordResponse.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/ControllerExceptionHandler.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/BreachedPasswordException.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/error/CustomErrorMessage.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/error/PasswordsNotDifferentException.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16603#comment
-status: Unchecked
-record: -1
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #28
+
+    POST /api/auth/changepass should respond with status code 401, responded: 500
+    This api only for authenticated user
+    Response body:
+    {
+      &quot;timestamp&quot; : &quot;2023-05-02T05:43:09.823+00:00&quot;,
+      &quot;status&quot; : 500,
+      &quot;error&quot; : &quot;Internal Server Error&quot;,
+      &quot;message&quot; : &quot;Cannot invoke \&quot;account.security.UserDetailsImpl.getUsername()\&quot; because \&quot;userDetails\&quot; is null&quot;,
+      &quot;path&quot; : &quot;/api/auth/changepass&quot;
+    }
+    Request body:
+    {&quot;new_password&quot;:&quot;oMoa3VvqnLxW&quot;}
+  time: "Tue, 02 May 2023 05:43:11 UTC"
+record: 3

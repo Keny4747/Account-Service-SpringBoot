@@ -4,6 +4,7 @@ import account.entity.NewPassword;
 import account.entity.PasswordResponse;
 import account.entity.User;
 import account.exceptions.BreachedPasswordException;
+import account.exceptions.UnauthorizedException;
 import account.exceptions.UserExistException;
 import account.exceptions.error.PasswordsNotDifferentException;
 import account.repository.BreachedPasswordsRepository;
@@ -51,7 +52,9 @@ public class UserService {
         }
 
         User user = userRepository.findByEmail(userDetails.getUsername());
-
+        if(user == null ){
+            throw  new UnauthorizedException();
+        }
 
         if(encoder.matches(newPassword.getNewPassword(),user.getPassword())){
             throw new PasswordsNotDifferentException("The passwords must be different!");

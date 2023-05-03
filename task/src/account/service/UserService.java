@@ -1,7 +1,7 @@
 package account.service;
 
-import account.entity.NewPassword;
-import account.entity.PasswordResponse;
+import account.entity.password.NewPassword;
+import account.entity.password.PasswordResponse;
 import account.entity.User;
 import account.exceptions.BreachedPasswordException;
 import account.exceptions.UnauthorizedException;
@@ -12,12 +12,10 @@ import account.repository.UserRepository;
 import account.security.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService {

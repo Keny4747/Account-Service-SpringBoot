@@ -1,4 +1,4 @@
-package account.entity;
+package account.entity.password;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

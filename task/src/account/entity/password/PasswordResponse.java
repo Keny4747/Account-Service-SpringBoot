@@ -1,4 +1,4 @@
-package account.entity;
+package account.entity.password;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

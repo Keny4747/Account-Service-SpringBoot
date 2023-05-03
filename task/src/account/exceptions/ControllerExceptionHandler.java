@@ -3,7 +3,6 @@ package account.exceptions;
 import account.exceptions.error.CustomErrorMessage;
 import account.exceptions.error.PasswordsNotDifferentException;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;

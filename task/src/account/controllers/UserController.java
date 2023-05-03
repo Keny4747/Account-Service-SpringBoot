@@ -1,7 +1,7 @@
 package account.controllers;
 
-import account.entity.NewPassword;
-import account.entity.PasswordResponse;
+import account.entity.password.NewPassword;
+import account.entity.password.PasswordResponse;
 import account.entity.User;
 import account.exceptions.UnauthorizedException;
 import account.security.UserDetailsImpl;

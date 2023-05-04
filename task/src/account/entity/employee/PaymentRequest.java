@@ -1,22 +1,24 @@
 package account.entity.employee;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
+public class PaymentRequest {
 
+    @JsonProperty("employee")
     private String email;
 
-    @Column( unique=true)
     private String period;
 
     @Min(value = 0)
+    @NotNull
     private Long salary;
 }

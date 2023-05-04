@@ -18,12 +18,12 @@ import java.util.List;
 @Service
 public class PaymentService {
 
-    private final UserRepository userRepository;
+
     private final PaymentRepository paymentRepository;
 
     @Autowired
     public PaymentService(UserRepository userRepository,PaymentRepository paymentRepository) {
-        this.userRepository = userRepository;
+        //this.userRepository = userRepository;
         this.paymentRepository = paymentRepository;
     }
 

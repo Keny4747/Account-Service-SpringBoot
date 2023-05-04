@@ -1,5 +1,6 @@
 package account.entity.employee;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,15 +19,16 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String employee;
+    @JsonProperty("employee")
+    private String email;
 
     @DateTimeFormat(pattern = "MM-yyyy")
     private YearMonth period;
 
     @Min(value = 0)
     private Long salary;
-    public Payment(String employee, YearMonth period, Long salary){
-        this.employee = employee;
+    public Payment(String email, YearMonth period, Long salary){
+        this.email = email;
         this.period = period;
         this.salary = salary;
     }

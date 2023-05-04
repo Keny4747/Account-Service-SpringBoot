@@ -27,18 +27,24 @@ public class PaymentService {
         this.paymentRepository = paymentRepository;
     }
 
+    //TODO: need to complete this, currently this found the payment in the BD and dont save the same payment
     @Transactional
     public PaymentResponse addPaymentEmployee(List<PaymentRequest> employee) {
         log.info("adding payrolls");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-yyyy");
+
         employee
                 .forEach(e -> {
                     YearMonth yearMonth = YearMonth.parse(e.getPeriod(), formatter);
-                    try {
-                        paymentRepository.save(new Payment(e.getEmail(), yearMonth, e.getSalary()));
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
+                    Payment payment =new Payment(e.getEmail(), yearMonth, e.getSalary());
+                    if(paymentRepository.findByPeriodAndEmail(payment.getPeriod(), payment.getEmail())==null){
+                        try {
+                            paymentRepository.save(payment);
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        }
                     }
+
                 });
 
         return new PaymentResponse();

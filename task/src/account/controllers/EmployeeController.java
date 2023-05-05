@@ -7,9 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/empl")
@@ -20,9 +19,16 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping("/payment")
-    public ResponseEntity<User> getUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails) {
-        return employeeService.getUserInfo(userDetails);
-    }
+    /*
+        @GetMapping("/payment")
+        public ResponseEntity<User> getUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails) {
+            return employeeService.getUserInfo(userDetails);
+        }
 
+     */
+    @GetMapping("/payment")
+    public /*ResponseEntity<User>*/String getUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails,@RequestParam(value = "period",required = false) String period) {
+        //return employeeService.getUserInfo(userDetails);
+        return period;
+    }
 }

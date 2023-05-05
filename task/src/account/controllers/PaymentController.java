@@ -2,7 +2,7 @@ package account.controllers;
 
 import account.entity.employee.Payment;
 import account.entity.employee.PaymentRequest;
-import account.entity.employee.PaymentResponse;
+import account.entity.employee.PaymentMessageResponse;
 import account.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -23,7 +23,7 @@ public class PaymentController {
     }
 
     @PostMapping("/payments")
-    public PaymentResponse addPaymentUser(@RequestBody List<@Valid PaymentRequest> employees) {
+    public PaymentMessageResponse addPaymentUser(@RequestBody List<@Valid PaymentRequest> employees) {
         return paymentService.addPaymentEmployee(employees);
 
     }

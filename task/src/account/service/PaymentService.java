@@ -2,7 +2,7 @@ package account.service;
 
 import account.entity.employee.Payment;
 import account.entity.employee.PaymentRequest;
-import account.entity.employee.PaymentResponse;
+import account.entity.employee.PaymentMessageResponse;
 import account.repository.PaymentRepository;
 import account.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +30,7 @@ public class PaymentService {
 
     //TODO: need to complete this, currently this found the payment in the BD and dont save the same payment
     @Transactional(rollbackOn = DataIntegrityViolationException.class)
-    public PaymentResponse addPaymentEmployee(List<PaymentRequest> employee) {
+    public PaymentMessageResponse addPaymentEmployee(List<PaymentRequest> employee) {
         log.info("adding payrolls");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-yyyy");
 
@@ -49,7 +49,7 @@ public class PaymentService {
             }
         });
 
-        return new PaymentResponse();
+        return new PaymentMessageResponse();
     }
 
 

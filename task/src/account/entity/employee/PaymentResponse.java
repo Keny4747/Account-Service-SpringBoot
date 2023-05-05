@@ -1,18 +1,25 @@
 package account.entity.employee;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.Entity;
+import javax.validation.constraints.Min;
+import java.time.YearMonth;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class PaymentResponse {
 
-    private static final String DEFAULT_STATUS = "Added successfully!";
-    private String status;
 
-    {
-        this.status = DEFAULT_STATUS;
-    }
+    @JsonProperty("employee")
+    private String email;
+
+    private YearMonth period;
+
+    private Long salary;
 }

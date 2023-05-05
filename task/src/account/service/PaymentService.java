@@ -7,6 +7,7 @@ import account.repository.PaymentRepository;
 import account.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -28,27 +29,31 @@ public class PaymentService {
     }
 
     //TODO: need to complete this, currently this found the payment in the BD and dont save the same payment
-    @Transactional
+    @Transactional(rollbackOn = DataIntegrityViolationException.class)
     public PaymentResponse addPaymentEmployee(List<PaymentRequest> employee) {
         log.info("adding payrolls");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-yyyy");
 
-        employee
-                .forEach(e -> {
-                    YearMonth yearMonth = YearMonth.parse(e.getPeriod(), formatter);
-                    Payment payment =new Payment(e.getEmail(), yearMonth, e.getSalary());
-                    if(paymentRepository.findByPeriodAndEmail(payment.getPeriod(), payment.getEmail())==null){
-                        try {
-                            paymentRepository.save(payment);
-                        } catch (Exception ex) {
-                            ex.printStackTrace();
-                        }
-                    }
+        employee.forEach(e -> {
+            YearMonth yearMonth = YearMonth.parse(e.getPeriod(), formatter);
+            Payment payment = new Payment(e.getEmail(), yearMonth, e.getSalary());
 
-                });
+            if (paymentRepository.findByPeriodAndEmail(payment.getPeriod(), payment.getEmail()) == null) {
+                try {
+                    paymentRepository.save(payment);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            } else {
+                throw new DataIntegrityViolationException("Error!");
+            }
+        });
 
         return new PaymentResponse();
     }
+
+    
+
     public List<Payment> findAll(){
         return paymentRepository.findAll();
     }

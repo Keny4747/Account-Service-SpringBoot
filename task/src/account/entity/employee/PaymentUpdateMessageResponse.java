@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PaymentMessageResponse {
-
-    private static final String DEFAULT_STATUS = "Added successfully!";
+public class PaymentUpdateMessageResponse {
+    private static final String DEFAULT_STATUS = "Updated successfully!";
     private String status;
 
     {

@@ -2,9 +2,12 @@ package account.service;
 
 import account.entity.employee.Payment;
 import account.entity.employee.PaymentRequest;
-import account.entity.employee.PaymentMessageResponse;
+import account.entity.employee.PaymentAddedMessageResponse;
+import account.entity.employee.PaymentUpdateMessageResponse;
+import account.exceptions.UserNotFoundException;
 import account.repository.PaymentRepository;
 import account.repository.UserRepository;
+import javassist.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -19,7 +22,7 @@ import java.util.List;
 @Service
 public class PaymentService {
 
-
+    private final DateTimeFormatter formatter= DateTimeFormatter.ofPattern("MM-yyyy");
     private final PaymentRepository paymentRepository;
 
     @Autowired
@@ -28,9 +31,9 @@ public class PaymentService {
         this.paymentRepository = paymentRepository;
     }
 
-    //TODO: need to complete this, currently this found the payment in the BD and dont save the same payment
+
     @Transactional(rollbackOn = DataIntegrityViolationException.class)
-    public PaymentMessageResponse addPaymentEmployee(List<PaymentRequest> employee) {
+    public PaymentAddedMessageResponse addPaymentEmployee(List<PaymentRequest> employee) {
         log.info("adding payrolls");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-yyyy");
 
@@ -49,7 +52,19 @@ public class PaymentService {
             }
         });
 
-        return new PaymentMessageResponse();
+        return new PaymentAddedMessageResponse();
+    }
+//TODO: formatter error
+    public PaymentUpdateMessageResponse updatePaymentEmployee(PaymentRequest paymentRequest){
+        Payment payment = paymentRepository.findByPeriodAndEmail(YearMonth.parse(paymentRequest.getPeriod(),formatter), paymentRequest.getEmail());
+        if(payment!=null){
+            payment.setPeriod(YearMonth.parse(paymentRequest.getPeriod()));
+            payment.setSalary(paymentRequest.getSalary());
+            paymentRepository.save(payment);
+        }else{
+           throw new UserNotFoundException();
+        }
+        return new PaymentUpdateMessageResponse();
     }
 
 

@@ -1,7 +1,5 @@
 package account.controllers;
 
-import account.entity.User;
-import account.entity.employee.PaymentResponse;
 import account.security.UserDetailsImpl;
 import account.service.EmployeeService;
 import org.springframework.http.ResponseEntity;
@@ -28,8 +26,7 @@ public class EmployeeController {
 
      */
     @GetMapping("/payment")
-    public ResponseEntity<PaymentResponse>getUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails, @RequestParam(value = "period",required = false) String period) {
-        return employeeService.getUserInfo(userDetails);
-
+    public ResponseEntity<?>getUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails, @RequestParam(value = "period",required = false) String period) {
+        return employeeService.getUserInfo(userDetails, period);
     }
 }

@@ -4,6 +4,8 @@ import account.entity.employee.Payment;
 import account.entity.employee.PaymentRequest;
 import account.entity.employee.PaymentAddedMessageResponse;
 import account.entity.employee.PaymentUpdateMessageResponse;
+import account.exceptions.PeriodException;
+import account.exceptions.UserExistException;
 import account.exceptions.UserNotFoundException;
 import account.repository.PaymentRepository;
 import account.repository.UserRepository;
@@ -48,7 +50,7 @@ public class PaymentService {
                     ex.printStackTrace();
                 }
             } else {
-                throw new DataIntegrityViolationException("Error!");
+                throw new PeriodException();
             }
         });
 
@@ -58,7 +60,6 @@ public class PaymentService {
     public PaymentUpdateMessageResponse updatePaymentEmployee(PaymentRequest paymentRequest){
         Payment payment = paymentRepository.findByPeriodAndEmail(YearMonth.parse(paymentRequest.getPeriod(),formatter), paymentRequest.getEmail());
         if(payment!=null){
-            payment.setPeriod(YearMonth.parse(paymentRequest.getPeriod()));
             payment.setSalary(paymentRequest.getSalary());
             paymentRepository.save(payment);
         }else{

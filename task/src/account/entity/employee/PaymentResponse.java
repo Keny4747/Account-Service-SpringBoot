@@ -8,6 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.time.YearMonth;
 
 @Data
@@ -19,7 +20,8 @@ public class PaymentResponse {
     @JsonProperty("employee")
     private String email;
 
-    private YearMonth period;
+    @DateTimeFormat(pattern = "MM-yyyy")
+    private String period;
 
     private Long salary;
 }

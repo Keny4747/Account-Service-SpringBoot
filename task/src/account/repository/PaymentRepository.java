@@ -6,11 +6,12 @@ import org.springframework.stereotype.Repository;
 
 import java.time.YearMonth;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment,Long> {
 
-    Payment findByPeriodAndEmail(YearMonth yearMonth,String email );
+    Optional<Payment> findByPeriodAndEmail(YearMonth yearMonth, String email );
 
     List<Payment> findPaymentByEmail(String email);
 }

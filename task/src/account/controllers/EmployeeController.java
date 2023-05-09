@@ -26,8 +26,13 @@ public class EmployeeController {
 
      */
     @GetMapping("/payment")
-    public ResponseEntity<?>getUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails, @RequestParam(value = "period",required = false) String period) {
-        return employeeService.getUserInfo(userDetails, period);
+    public Object getUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails, @RequestParam(value = "period",defaultValue = "") String period) {
+
+        if(period.isEmpty()) {
+            return employeeService.getUserPayments(userDetails);
+        }else {
+            return employeeService.getUserInfo(userDetails, period);
+        }
     }
 
 

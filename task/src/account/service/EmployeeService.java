@@ -1,16 +1,21 @@
 package account.service;
 
+import account.entity.User;
+import account.entity.employee.GetPaymentsResponse;
 import account.entity.employee.Payment;
 import account.repository.PaymentRepository;
+import account.repository.UserRepository;
 import account.security.UserDetailsImpl;
 import account.util.DatePaymentFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeService {
@@ -18,22 +23,42 @@ public class EmployeeService {
 
     private final PaymentRepository paymentRepository;
 
-    public EmployeeService(PaymentRepository paymentRepository) {
-        this.paymentRepository = paymentRepository;
+    private final UserRepository userRepository;
 
+
+    public EmployeeService(PaymentRepository paymentRepository,UserRepository userRepository) {
+        this.paymentRepository = paymentRepository;
+        this.userRepository =userRepository;
     }
 
     //TODO: change the format of period to "MM/yyyy"
-    public ResponseEntity<?> getUserInfo(UserDetailsImpl userDetails, String period) {
+    public List<GetPaymentsResponse> getUserPayments(UserDetailsImpl userDetails) {
+        User user = userRepository.findByEmail(userDetails.getUsername());
+           return paymentRepository.findPaymentByEmail(userDetails.getUsername())
+                   .stream()
+                   .map(entity ->
+                           GetPaymentsResponse.builder()
+                                   .name(user.getName())
+                                   .lastname(user.getLastname())
+                                   .period(String.valueOf(entity.getPeriod()))
+                                   .salary(entity.getSalary())
+                                   .build()
+                           )
+                   .collect(Collectors.toList());
+    }
 
-        if (period == null) {
+    public GetPaymentsResponse getUserInfo(UserDetailsImpl userDetails, String period) {
 
-            List<Payment> paymentList = paymentRepository.findPaymentByEmail(userDetails.getUsername());
-            return new ResponseEntity<>(paymentList, HttpStatus.OK);
-        } else {
-            Payment payment = paymentRepository.findByPeriodAndEmail(YearMonth.parse(period,formatter), userDetails.getUsername());
-            return new ResponseEntity<>(payment, HttpStatus.OK);
-        }
+            User user = userRepository.findByEmail(userDetails.getUsername());
+
+            Payment payment = paymentRepository.findByPeriodAndEmail(YearMonth.parse(period,formatter), userDetails.getUsername())
+                    .orElseThrow(EntityNotFoundException::new);
+            return GetPaymentsResponse.builder()
+                    .name(user.getName())
+                    .lastname(user.getLastname())
+                    .salary(payment.getSalary())
+                    .period(String.valueOf(payment.getPeriod()))
+                    .build();
     }
 
 }

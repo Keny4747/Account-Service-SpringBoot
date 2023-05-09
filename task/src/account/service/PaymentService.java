@@ -19,6 +19,7 @@ import javax.transaction.Transactional;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -43,7 +44,7 @@ public class PaymentService {
             YearMonth yearMonth = YearMonth.parse(e.getPeriod(), formatter);
             Payment payment = new Payment(e.getEmail(), yearMonth, e.getSalary());
 
-            if (paymentRepository.findByPeriodAndEmail(payment.getPeriod(), payment.getEmail()) == null) {
+            if (paymentRepository.findByPeriodAndEmail(payment.getPeriod(), payment.getEmail()).isEmpty()) {
                 try {
                     paymentRepository.save(payment);
                 } catch (Exception ex) {
@@ -58,17 +59,16 @@ public class PaymentService {
     }
 //TODO: formatter error
     public PaymentUpdateMessageResponse updatePaymentEmployee(PaymentRequest paymentRequest){
-        Payment payment = paymentRepository.findByPeriodAndEmail(YearMonth.parse(paymentRequest.getPeriod(),formatter), paymentRequest.getEmail());
-        if(payment!=null){
-            payment.setSalary(paymentRequest.getSalary());
-            paymentRepository.save(payment);
+        Optional<Payment> payment = paymentRepository.findByPeriodAndEmail(YearMonth.parse(paymentRequest.getPeriod(),formatter), paymentRequest.getEmail());
+        if(payment.isPresent()){
+            payment.get().setSalary(paymentRequest.getSalary());
+            paymentRepository.save(payment.get());
         }else{
            throw new UserNotFoundException();
         }
         return new PaymentUpdateMessageResponse();
     }
-
-
+    
 
     public List<Payment> findAll(){
         return paymentRepository.findAll();

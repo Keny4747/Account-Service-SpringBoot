@@ -22,7 +22,7 @@ public class PaymentController {
     public PaymentController(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
-    //TODO: message error: 400 bad request, now the endpoint show me 500
+    //TODO: message error: 400 bad request, now the endpoint show me 500 for valid salary
     @PostMapping("/payments")
     public PaymentAddedMessageResponse addPaymentUser(@RequestBody List<@Valid PaymentRequest> employees) {
         return paymentService.addPaymentEmployee(employees);

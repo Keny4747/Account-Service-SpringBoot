@@ -1372,6 +1372,9 @@ files:
 - name: src/account/entity/employee/GetPaymentsResponse.java
   visible: true
   learner_created: true
+- name: src/account/util/SalaryFormatter.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16604#comment
 status: Unchecked
 record: -1

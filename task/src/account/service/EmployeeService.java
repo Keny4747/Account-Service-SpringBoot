@@ -7,6 +7,7 @@ import account.repository.PaymentRepository;
 import account.repository.UserRepository;
 import account.security.UserDetailsImpl;
 import account.util.DatePaymentFormat;
+import account.util.SalaryFormatter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -25,10 +26,13 @@ public class EmployeeService {
 
     private final UserRepository userRepository;
 
+    private final SalaryFormatter salaryFormatter;
 
-    public EmployeeService(PaymentRepository paymentRepository,UserRepository userRepository) {
+
+    public EmployeeService(PaymentRepository paymentRepository,UserRepository userRepository,SalaryFormatter salaryFormatter) {
         this.paymentRepository = paymentRepository;
         this.userRepository =userRepository;
+        this.salaryFormatter = salaryFormatter;
     }
 
     //TODO: change the format of period to "MM/yyyy"
@@ -41,7 +45,7 @@ public class EmployeeService {
                                    .name(user.getName())
                                    .lastname(user.getLastname())
                                    .period(String.valueOf(entity.getPeriod()))
-                                   .salary(entity.getSalary())
+                                   .salary(salaryFormatter.getFormattedSalary(entity.getSalary()))
                                    .build()
                            )
                    .collect(Collectors.toList());
@@ -56,7 +60,7 @@ public class EmployeeService {
             return GetPaymentsResponse.builder()
                     .name(user.getName())
                     .lastname(user.getLastname())
-                    .salary(payment.getSalary())
+                    .salary(salaryFormatter.getFormattedSalary(payment.getSalary()))
                     .period(String.valueOf(payment.getPeriod()))
                     .build();
     }

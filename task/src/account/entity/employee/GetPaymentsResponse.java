@@ -12,5 +12,5 @@ public class GetPaymentsResponse {
     private String name;
     private String lastname;
     private String period;
-    private Long salary;
+    private String salary;
 }

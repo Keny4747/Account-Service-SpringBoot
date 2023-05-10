@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment,Long> {
 
-    Optional<Payment> findByPeriodAndEmail(YearMonth yearMonth, String email );
+    Optional<Payment> findByPeriodAndEmailIgnoreCase(YearMonth yearMonth, String email );
 
-    List<Payment> findPaymentByEmail(String email);
+    List<Payment> findPaymentByEmailIgnoreCaseOrderByPeriodDesc(String email);
 }

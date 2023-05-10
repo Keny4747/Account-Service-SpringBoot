@@ -1,15 +1,18 @@
 package account.util;
 
-public enum DatePaymentFormat {
+import org.springframework.stereotype.Component;
 
-     DATEFORMAT("MM/YYYY");
+import java.time.YearMonth;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
-    private final String formatValue;
+@Component
+public class DatePaymentFormat {
 
-    private DatePaymentFormat(String formatValue){
-        this.formatValue = formatValue;
+    public String getFormattedPeriod(YearMonth period){
+       return period.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH)
+                .concat("-")
+                .concat(String.valueOf(period.getYear()));
     }
-    public String getDateFormat() {
-        return formatValue;
-    }
+
 }

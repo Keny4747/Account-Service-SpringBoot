@@ -65,7 +65,8 @@ public class UserService {
         //user.setEmail(user.getEmail().toLowerCase());
         //userRepository.save(userRequest);
 
-        return ResponseEntity.ok(getUserDto(userRepository.save(userRequest)));
+        return ResponseEntity.ok(new UserDTO(userRepository.save(userRequest)));
+        //return ResponseEntity.ok(getUserDto(userRepository.save(userRequest)));
     }
 
     public PasswordResponse changePassword(NewPassword newPassword, UserDetailsImpl userDetails){
@@ -89,33 +90,4 @@ public class UserService {
         return new PasswordResponse(user.getEmail().toLowerCase(),"The password has been updated successfully");
     }
 
-    /*
-    public List<UserDTO> getAllUsers(){
-        return userRepository.findAll().stream()
-                .map(user ->{
-                    UserDTO userDTO = new UserDTO();
-                    userDTO.setId(user.getId());
-                    userDTO.setName(user.getName());
-                    userDTO.setLastname(user.getLastname());
-                    userDTO.setEmail(user.getEmail());
-                    List<String> roles = user.getRoles().stream()
-                            .map(Role::getName)
-                            .collect(Collectors.toList());
-                    userDTO.setRoles(roles);
-                    return userDTO;
-                })
-                .collect(Collectors.toList());
-    }
-
-     */
-    public UserDTO getUserDto(User user){
-        List<String> roles = user.getRoles().stream()
-                .map(Role::getName)
-                .toList();
-
-       UserDTO userDTO = new UserDTO();
-        new ModelMapper().map(user,userDTO);
-        userDTO.setRoles(roles);
-        return userDTO;
-    }
 }

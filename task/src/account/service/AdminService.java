@@ -2,7 +2,6 @@ package account.service;
 
 import account.dto.UserDTO;
 import account.entity.User;
-import account.entity.role.Role;
 import account.entity.user.UserDeleteResponse;
 import account.entity.user.UserUpdate;
 import account.exceptions.AdminCanNotDeleteException;
@@ -11,7 +10,6 @@ import account.exceptions.RoleNotFoundException;
 import account.exceptions.UserNotFoundException;
 import account.repository.RoleRepository;
 import account.repository.UserRepository;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,18 +33,7 @@ public class AdminService {
 
     public List<UserDTO> getAllUsers(){
         return userRepository.findAll().stream()
-                .map(user ->{
-                    UserDTO userDTO = new UserDTO();
-                    userDTO.setId(user.getId());
-                    userDTO.setName(user.getName());
-                    userDTO.setLastname(user.getLastname());
-                    userDTO.setEmail(user.getEmail());
-                    List<String> roles = user.getRoles().stream()
-                            .map(Role::getName)
-                            .collect(Collectors.toList());
-                    userDTO.setRoles(roles);
-                    return userDTO;
-                })
+                .map(UserDTO::new)
                 .collect(Collectors.toList());
     }
 
@@ -76,9 +63,9 @@ public class AdminService {
             throw new UserNotFoundException();
         }
 
-        String role = roleAssign(userUpdate.getRole());
+        String roleUser = roleAssign(userUpdate.getRole());
 
-        if(roleRepository.findByName(role).isEmpty()){
+        if(roleRepository.findByName(roleUser).isEmpty()){
             throw new RoleNotFoundException();
         }
 
@@ -95,7 +82,7 @@ public class AdminService {
                 }
                 //finally delete role user:)
                 //TODO: delete currently role
-                user.getRoles().remove(roleRepository.findByName(role).orElseThrow());
+                user.getRoles().remove(roleRepository.findByName(roleUser).orElseThrow());
                 userRepository.save(user);
             }else {
                 throw new RoleCustomException("The user does not have a role!");
@@ -105,22 +92,13 @@ public class AdminService {
         //GRANT OPERATION
         if(userUpdate.getOperation().equals(GRANT.name())){
 
-            if(userUpdate.getRole().equals(ADMIN.getValue())){
+            if(roleUser.equals(ADMIN.getValue())){
                 throw new RoleCustomException("The user cannot combine administrative and business roles!");
             }
-            user.getRoles().add(roleRepository.findByName(role).orElseThrow());
+            user.getRoles().add(roleRepository.findByName(roleUser).orElseThrow());
             userRepository.save(user);
         }
 
-        //Mapping User to DTO
-        List<String> rolesDto = user.getRoles().stream()
-                .map(Role::getName)
-                .toList();
-
-        UserDTO userDTO = new UserDTO();
-        new ModelMapper().map(user,userDTO);
-        userDTO.setRoles(rolesDto);
-
-        return userDTO;
+        return new UserDTO(user);
     }
 }

@@ -1,5 +1,6 @@
 package account.controllers;
 
+import account.dto.UserDTO;
 import account.entity.password.NewPassword;
 import account.entity.password.PasswordResponse;
 import account.entity.User;
@@ -28,7 +29,7 @@ public class UserController {
 
     @PostMapping("/signup")
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<User> registerAccount(@Valid @RequestBody User user) {
+    public ResponseEntity<UserDTO> registerAccount(@Valid @RequestBody User user) {
         return userService.registerAccount(user);
     }
 
@@ -41,8 +42,11 @@ public class UserController {
         return  userService.changePassword(newPassword, userDetails);
     }
 
+    /*
     @GetMapping("/all")
-    public List<User> getAll( ){
-        return userService.getAllUser();
+    public List<UserDTO> getAll( ){
+        return userService.getAllUsers();
     }
+
+     */
 }

@@ -1,5 +1,7 @@
 package account.entity;
 
+import account.entity.role.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +13,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -44,6 +47,11 @@ public class User {
     @Column(name = "password", nullable = false)
     @Size(min = 12, message ="Password length must be 12 chars minimum!")
     private String password;
+
+    //TODO: check this changes
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Role> roles;
 
     @Override
     public boolean equals(Object o) {

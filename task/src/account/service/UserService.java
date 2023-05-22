@@ -1,21 +1,28 @@
 package account.service;
 
+import account.dto.UserDTO;
 import account.entity.password.NewPassword;
 import account.entity.password.PasswordResponse;
 import account.entity.User;
+import account.entity.role.Role;
 import account.exceptions.BreachedPasswordException;
 import account.exceptions.UnauthorizedException;
 import account.exceptions.UserExistException;
 import account.exceptions.error.PasswordsNotDifferentException;
 import account.repository.BreachedPasswordsRepository;
+import account.repository.RoleRepository;
 import account.repository.UserRepository;
 import account.security.UserDetailsImpl;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -25,24 +32,40 @@ public class UserService {
 
     private final BreachedPasswordsRepository breachedPasswordsRepository;
 
+    private final RoleRepository roleRepository;
+
     @Autowired
-    public UserService(UserRepository userRepository, PasswordEncoder encoder, BreachedPasswordsRepository breachedPasswordsRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder encoder,
+                       BreachedPasswordsRepository breachedPasswordsRepository,
+                       RoleRepository roleRepository) {
         this.userRepository = userRepository;
         this.encoder = encoder;
         this.breachedPasswordsRepository = breachedPasswordsRepository;
+        this.roleRepository = roleRepository;
     }
 
-    public ResponseEntity<User> registerAccount(User user) {
-        if (userRepository.existsUserByEmailIgnoreCase(user.getEmail())) {
+    public ResponseEntity<UserDTO> registerAccount(User userRequest) {
+
+        //TODO: check changes
+        if(userRepository.findAll().isEmpty()){
+            userRequest.setRoles(new ArrayList<>(Set.of(roleRepository.findByName("ROLE_ADMINISTRATOR").orElseThrow())));
+        }else {
+            userRequest.setRoles(new ArrayList<>(Set.of(roleRepository.findByName("ROLE_USER").orElseThrow())));
+        }
+        //End changes
+
+        if (userRepository.existsUserByEmailIgnoreCase(userRequest.getEmail())) {
             throw new UserExistException();
         }
-        if(breachedPasswordsRepository.getAllPasswords().contains(user.getPassword())){
+        if(breachedPasswordsRepository.getAllPasswords().contains(userRequest.getPassword())){
             throw new BreachedPasswordException("The password is in the hacker's database!");
         }
-        user.setPassword(encoder.encode(user.getPassword()));
+        userRequest.setPassword(encoder.encode(userRequest.getPassword()));
+
         //user.setEmail(user.getEmail().toLowerCase());
-        userRepository.save(user);
-        return ResponseEntity.ok(user);
+        //userRepository.save(userRequest);
+
+        return ResponseEntity.ok(getUserDto(userRepository.save(userRequest)));
     }
 
     public PasswordResponse changePassword(NewPassword newPassword, UserDetailsImpl userDetails){
@@ -66,7 +89,33 @@ public class UserService {
         return new PasswordResponse(user.getEmail().toLowerCase(),"The password has been updated successfully");
     }
 
-    public List<User> getAllUser(){
-        return userRepository.findAll();
+    /*
+    public List<UserDTO> getAllUsers(){
+        return userRepository.findAll().stream()
+                .map(user ->{
+                    UserDTO userDTO = new UserDTO();
+                    userDTO.setId(user.getId());
+                    userDTO.setName(user.getName());
+                    userDTO.setLastname(user.getLastname());
+                    userDTO.setEmail(user.getEmail());
+                    List<String> roles = user.getRoles().stream()
+                            .map(Role::getName)
+                            .collect(Collectors.toList());
+                    userDTO.setRoles(roles);
+                    return userDTO;
+                })
+                .collect(Collectors.toList());
+    }
+
+     */
+    public UserDTO getUserDto(User user){
+        List<String> roles = user.getRoles().stream()
+                .map(Role::getName)
+                .toList();
+
+       UserDTO userDTO = new UserDTO();
+        new ModelMapper().map(user,userDTO);
+        userDTO.setRoles(roles);
+        return userDTO;
     }
 }

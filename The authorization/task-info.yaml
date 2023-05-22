@@ -1192,37 +1192,6 @@ files:
         }
     }
   learner_created: true
-- name: src/account/entity/employee/PaymentResponse.java
-  visible: true
-  text: |
-    package account.entity.employee;
-
-    import com.fasterxml.jackson.annotation.JsonProperty;
-    import lombok.AllArgsConstructor;
-    import lombok.Data;
-    import lombok.NoArgsConstructor;
-    import org.springframework.format.annotation.DateTimeFormat;
-
-    import javax.persistence.Entity;
-    import javax.validation.constraints.Min;
-    import javax.validation.constraints.NotNull;
-    import java.time.YearMonth;
-
-    @Data
-    @AllArgsConstructor
-    @NoArgsConstructor
-    public class PaymentResponse {
-
-
-        @JsonProperty("employee")
-        private String email;
-
-        @DateTimeFormat(pattern = "MM-yyyy")
-        private String period;
-
-        private Long salary;
-    }
-  learner_created: true
 - name: src/account/entity/User.java
   visible: true
   text: |
@@ -2014,6 +1983,51 @@ files:
             return userRepository.findAll();
         }
     }
+  learner_created: true
+- name: src/account/entity/role/Role.java
+  visible: true
+  learner_created: true
+- name: src/account/repository/RoleRepository.java
+  visible: true
+  learner_created: true
+- name: src/account/data/RoleLoader.java
+  visible: true
+  learner_created: true
+- name: src/account/dto/UserDTO.java
+  visible: true
+  learner_created: true
+- name: src/account/controllers/AdminController.java
+  visible: true
+  learner_created: true
+- name: src/account/service/AdminService.java
+  visible: true
+  learner_created: true
+- name: src/account/entity/user/UserDeleteResponse.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/AdminCanNotDeleteException.java
+  visible: true
+  learner_created: true
+- name: src/account/util/Operation.java
+  visible: true
+  learner_created: true
+- name: src/account/entity/user/UserUpdate.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/RoleNotFoundException.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/AdminRoleException.java
+  visible: true
+  learner_created: true
+- name: src/account/exceptions/RoleCustomException.java
+  visible: true
+  learner_created: true
+- name: src/account/util/RoleUtil.java
+  visible: true
+  learner_created: true
+- name: src/account/util/RoleAssignment.java
+  visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16605#comment
 status: Unchecked

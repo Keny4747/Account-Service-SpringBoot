@@ -27,7 +27,11 @@ public class SecurityConfiguration {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeRequests(auth -> {
-                    auth.antMatchers("/api/auth/signup","/api/auth/all","api/acct/**").permitAll();
+                    auth.antMatchers(
+                            "/api/auth/signup",
+                            "/api/auth/all",
+                            "api/acct/**",
+                            "api/admin/**").permitAll();
                     auth.antMatchers("/api/empl/payment","api/auth/changepass").authenticated();
                 })
                 .userDetailsService(userDetailsService)

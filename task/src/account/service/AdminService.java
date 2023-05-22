@@ -44,7 +44,7 @@ public class AdminService {
             throw new UserNotFoundException();
         }
 
-        if(user.getRoles().toString().contains("ROLE_ADMINISTRATOR")){
+        if(user.getRoles().toString().contains(ADMIN.getValue())){
             throw new AdminCanNotDeleteException();
         }
 
@@ -80,8 +80,6 @@ public class AdminService {
                 if(user.getRoles().size()==1){
                     throw new RoleCustomException("The user must have at least one role!");
                 }
-                //finally delete role user:)
-                //TODO: delete currently role
                 user.getRoles().remove(roleRepository.findByName(roleUser).orElseThrow());
                 userRepository.save(user);
             }else {

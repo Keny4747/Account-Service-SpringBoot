@@ -2,6 +2,7 @@ package account.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -23,7 +24,7 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-
+        /*
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeRequests(auth -> {
@@ -40,6 +41,32 @@ public class SecurityConfiguration {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .build();
+         */
+
+        http.httpBasic()
+                .and()
+                .csrf().disable().headers().frameOptions().disable() // for Postman, the H2 console
+                .and()
+                .authorizeRequests() // manage access
+                .antMatchers("/h2/**").permitAll()
+                .antMatchers("/actuator/shutdown").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/signup/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/empl/payment/**", "/api/empl/payment").hasAnyRole("USER", "ACCOUNTANT")
+                .antMatchers(HttpMethod.POST, "/api/auth/changepass/**").hasAnyRole("ADMINISTRATOR", "USER", "ACCOUNTANT")
+                .antMatchers(HttpMethod.POST, "/api/acct/payments/**", "/api/acct/payments").hasRole("ACCOUNTANT")
+                .antMatchers(HttpMethod.PUT, "/api/acct/payments/**").hasRole("ACCOUNTANT")
+                .antMatchers(HttpMethod.GET, "/api/admin/user/**").hasRole("ADMINISTRATOR")
+                .antMatchers(HttpMethod.DELETE, "/api/admin/user/**").hasRole("ADMINISTRATOR")
+                .antMatchers(HttpMethod.PUT, "/api/admin/user/role/**").hasRole("ADMINISTRATOR")
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .permitAll()
+                .and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        return http.build();
 
     }
 

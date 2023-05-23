@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-10T04:50:35" hostname="DESKTOP-AG8QKJE" time="39.528">
+<testsuite name="AccountServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-23T03:48:48" hostname="DESKTOP-AG8QKJE" time="65.63">
   <properties/>
-  <testcase name="start" classname="AccountServiceTest" time="39.528"/>
+  <testcase name="start" classname="AccountServiceTest" time="65.63"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 ?[0;34m
@@ -13,36 +13,47 @@ Start test 1?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v2.5.5)
 ?[0m?[0;34m
-?[0m?[0;34m2023-05-09 23:50:36.447  INFO 9700 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.5 on DESKTOP-AG8QKJE with PID 9700 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
-?[0m?[0;34m2023-05-09 23:50:36.449  INFO 9700 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-?[0m?[0;34m2023-05-09 23:50:37.399  INFO 9700 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2023-05-09 23:50:37.461  INFO 9700 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
-?[0m?[0;34m2023-05-09 23:50:38.043  INFO 9700 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-?[0m?[0;34m2023-05-09 23:50:38.055  INFO 9700 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2023-05-09 23:50:38.055  INFO 9700 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-?[0m?[0;34m2023-05-09 23:50:38.166  INFO 9700 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2023-05-09 23:50:38.166  INFO 9700 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1674 ms
-?[0m?[0;34m2023-05-09 23:50:38.456  INFO 9700 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2023-05-09 23:50:38.516  INFO 9700 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-?[0m?[0;34m2023-05-09 23:50:38.690  INFO 9700 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-?[0m?[0;34m2023-05-09 23:50:38.822  INFO 9700 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-?[0m?[0;34m2023-05-09 23:50:38.979  INFO 9700 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-?[0m?[0;34m2023-05-09 23:50:38.997  INFO 9700 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-05-22 22:48:49.617  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 1460 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
+?[0m?[0;34m2023-05-22 22:48:49.622  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-05-22 22:48:50.608  INFO 1460 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-05-22 22:48:50.678  INFO 1460 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+?[0m?[0;34m2023-05-22 22:48:51.290  INFO 1460 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-05-22 22:48:51.302  INFO 1460 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-05-22 22:48:51.303  INFO 1460 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+?[0m?[0;34m2023-05-22 22:48:51.415  INFO 1460 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-05-22 22:48:51.416  INFO 1460 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1746 ms
+?[0m?[0;34m2023-05-22 22:48:51.734  INFO 1460 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-05-22 22:48:51.797  INFO 1460 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+?[0m?[0;34m2023-05-22 22:48:51.974  INFO 1460 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[0m?[0;34m2023-05-22 22:48:52.098  INFO 1460 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2023-05-22 22:48:52.265  INFO 1460 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2023-05-22 22:48:52.282  INFO 1460 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 ?[0m?[0;34mHibernate: create table payment (id bigint generated by default as identity, email varchar(255), period binary(255), salary bigint check (salary>=0), primary key (id))
+?[0m?[0;34mHibernate: create table role (id bigint not null, name varchar(255), primary key (id))
 ?[0m?[0;34mHibernate: create table users (id_user bigint not null, email varchar(255) not null, lastname varchar(255) not null, name varchar(255) not null, password varchar(255) not null, primary key (id_user))
+?[0m?[0;34mHibernate: create table users_roles (user_id_user bigint not null, roles_id bigint not null)
 ?[0m?[0;34mHibernate: alter table users drop constraint if exists UK_6dotkott2kjsp8vw4d0m25fb7
 ?[0m?[0;34mHibernate: alter table users add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
 ?[0m?[0;34mHibernate: create sequence hibernate_sequence start with 1 increment by 1
-?[0m?[0;34m2023-05-09 23:50:39.732  INFO 9700 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2023-05-09 23:50:39.746  INFO 9700 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-05-09 23:50:40.379  INFO 9700 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76efa2b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@3284de45, org.springframework.security.web.header.HeaderWriterFilter@2ced7cf, org.springframework.security.web.authentication.logout.LogoutFilter@6e7d9d0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@365a4b9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fccdd1d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48590849, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2027d56f, org.springframework.security.web.session.SessionManagementFilter@6c4e11d0, org.springframework.security.web.access.ExceptionTranslationFilter@3cdc5155, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25b87e1b]
-?[0m?[0;34m2023-05-09 23:50:40.436  WARN 9700 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2023-05-09 23:50:40.958  INFO 9700 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2023-05-09 23:50:41.008  INFO 9700 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-?[0m?[0;34m2023-05-09 23:50:41.021  INFO 9700 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 4.949 seconds (JVM running for 5.968)
-?[0;34m2023-05-09 23:50:41.334  INFO 9700 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-09 23:50:41.334  INFO 9700 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-09 23:50:41.336  INFO 9700 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+?[0m?[0;34mHibernate: alter table users_roles add constraint FK15d410tj6juko0sq9k4km60xq foreign key (roles_id) references role
+?[0m?[0;34mHibernate: alter table users_roles add constraint FKefjaby63mmor4vao42s25g57s foreign key (user_id_user) references users
+?[0m?[0;34m2023-05-22 22:48:52.993  INFO 1460 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-05-22 22:48:53.004  INFO 1460 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into role (name, id) values (?, ?)
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into role (name, id) values (?, ?)
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into role (name, id) values (?, ?)
+?[0m?[0;34m2023-05-22 22:48:53.933  INFO 1460 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6764201e, org.springframework.security.web.context.SecurityContextPersistenceFilter@276eafad, org.springframework.security.web.header.HeaderWriterFilter@3749c6ac, org.springframework.security.web.authentication.logout.LogoutFilter@42a89cef, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@397f9672, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ce1ec7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@90b9695, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a3d52a0, org.springframework.security.web.session.SessionManagementFilter@7afac89a, org.springframework.security.web.access.ExceptionTranslationFilter@71d8794f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bd53c5c]
+?[0m?[0;34m2023-05-22 22:48:53.994  WARN 1460 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-05-22 22:48:54.513  INFO 1460 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-05-22 22:48:54.555  INFO 1460 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-05-22 22:48:54.566  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 5.314 seconds (JVM running for 6.258)
+?[0;34m2023-05-22 22:48:54.892  INFO 1460 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-22 22:48:54.892  INFO 1460 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-22 22:48:54.894  INFO 1460 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 ?[0m?[1;31m
 Start test 2?[0m
 ?[1;31m
@@ -63,123 +74,196 @@ Start test 9?[0m
 Start test 10?[0m
 ?[1;31m
 Start test 11?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
 ?[1;31m
 Start test 12?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
 ?[0m?[0;34mHibernate: call next value for hibernate_sequence
 ?[0m?[0;34mHibernate: insert into users (email, lastname, name, password, id_user) values (?, ?, ?, ?, ?)
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
 ?[1;31m
 Start test 13?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[1;31m
-Start test 14?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[1;31m
-Start test 15?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[1;31m
-Start test 16?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
 ?[0m?[0;34mHibernate: call next value for hibernate_sequence
 ?[0m?[0;34mHibernate: insert into users (email, lastname, name, password, id_user) values (?, ?, ?, ?, ?)
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[1;31m
+Start test 14?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into users (email, lastname, name, password, id_user) values (?, ?, ?, ?, ?)
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[1;31m
+Start test 15?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into users (email, lastname, name, password, id_user) values (?, ?, ?, ?, ?)
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[1;31m
+Start test 16?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
 ?[1;31m
 Start test 17?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
 ?[1;31m
 Start test 18?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
 ?[1;31m
 Start test 19?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
 ?[1;31m
 Start test 20?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
 ?[1;31m
 Start test 21?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
 Start test 22?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
 ?[1;31m
 Start test 23?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
 ?[1;31m
 Start test 24?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
 ?[1;31m
 Start test 25?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
 ?[1;31m
 Start test 26?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
 Start test 27?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
 Start test 28?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
 Start test 29?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[1;31m
-Start test 30?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[1;31m
-Start test 31?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[1;31m
-Start test 32?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: update users set email=?, lastname=?, name=?, password=? where id_user=?
 ?[1;31m
-Start test 33?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
+Start test 30?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
-Start test 34?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+Start test 31?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
-Start test 35?[0m
-?[0;34m2023-05-09 23:50:58.141  INFO 9700 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-05-09 23:50:58.142  INFO 9700 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-?[0m?[0;34m2023-05-09 23:50:58.417  INFO 9700 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+Start test 32?[0m
+?[0;34m2023-05-22 22:49:09.066  INFO 1460 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-05-22 22:49:09.069  INFO 1460 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2023-05-22 22:49:09.488  INFO 1460 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 ?[0;34m
 ?[0m?[0;34m  .   ____          _            __ _ _
 ?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -189,119 +273,379 @@ Start test 35?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v2.5.5)
 ?[0m?[0;34m
-?[0m?[0;34m2023-05-09 23:51:08.657  INFO 9700 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.5 on DESKTOP-AG8QKJE with PID 9700 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
-?[0m?[0;34m2023-05-09 23:51:08.657  INFO 9700 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-?[0m?[0;34m2023-05-09 23:51:08.920  INFO 9700 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2023-05-09 23:51:08.931  INFO 9700 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
-?[0m?[0;34m2023-05-09 23:51:09.022  INFO 9700 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-?[0m?[0;34m2023-05-09 23:51:09.024  INFO 9700 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2023-05-09 23:51:09.024  INFO 9700 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-?[0m?[0;34m2023-05-09 23:51:09.048  INFO 9700 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2023-05-09 23:51:09.049  INFO 9700 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 389 ms
-?[0m?[0;34m2023-05-09 23:51:09.122  INFO 9700 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2023-05-09 23:51:09.127  INFO 9700 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-?[0m?[0;34m2023-05-09 23:51:09.134  INFO 9700 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-?[0m?[0;34m2023-05-09 23:51:09.134  INFO 9700 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-?[0m?[0;34m2023-05-09 23:51:09.184  INFO 9700 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2023-05-09 23:51:09.184  INFO 9700 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-05-09 23:51:09.303  INFO 9700 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bca3b27, org.springframework.security.web.context.SecurityContextPersistenceFilter@598f065f, org.springframework.security.web.header.HeaderWriterFilter@6c8b6782, org.springframework.security.web.authentication.logout.LogoutFilter@2d094add, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@27215154, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21f48f6c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16745ba7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25bd8eab, org.springframework.security.web.session.SessionManagementFilter@4ceac22d, org.springframework.security.web.access.ExceptionTranslationFilter@204b1903, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25a2a71d]
-?[0m?[0;34m2023-05-09 23:51:09.328  WARN 9700 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2023-05-09 23:51:09.471  INFO 9700 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2023-05-09 23:51:09.484  INFO 9700 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-?[0m?[0;34m2023-05-09 23:51:09.492  INFO 9700 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 0.859 seconds (JVM running for 34.439)
+?[0m?[0;34m2023-05-22 22:49:19.565  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 1460 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
+?[0m?[0;34m2023-05-22 22:49:19.566  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-05-22 22:49:19.831  INFO 1460 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-05-22 22:49:19.845  INFO 1460 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+?[0m?[0;34m2023-05-22 22:49:19.939  INFO 1460 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-05-22 22:49:19.940  INFO 1460 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-05-22 22:49:19.940  INFO 1460 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+?[0m?[0;34m2023-05-22 22:49:19.970  INFO 1460 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-05-22 22:49:19.970  INFO 1460 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 402 ms
+?[0m?[0;34m2023-05-22 22:49:20.055  INFO 1460 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-05-22 22:49:20.061  INFO 1460 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2023-05-22 22:49:20.070  INFO 1460 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2023-05-22 22:49:20.071  INFO 1460 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-05-22 22:49:20.157  INFO 1460 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-05-22 22:49:20.157  INFO 1460 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34m2023-05-22 22:49:20.566  INFO 1460 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@572d1f18, org.springframework.security.web.context.SecurityContextPersistenceFilter@5765cd21, org.springframework.security.web.header.HeaderWriterFilter@1a262e93, org.springframework.security.web.authentication.logout.LogoutFilter@1979d616, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6272936b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63c31664, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48bafe39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28e12bc5, org.springframework.security.web.session.SessionManagementFilter@720b52a7, org.springframework.security.web.access.ExceptionTranslationFilter@7c09037a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8588a62]
+?[0m?[0;34m2023-05-22 22:49:20.590  WARN 1460 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-05-22 22:49:20.742  INFO 1460 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-05-22 22:49:20.755  INFO 1460 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-05-22 22:49:20.763  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 1.219 seconds (JVM running for 32.456)
 ?[0m?[1;31m
-Start test 36?[0m
-?[0;34m2023-05-09 23:51:09.500  INFO 9700 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-09 23:51:09.501  INFO 9700 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2023-05-09 23:51:09.502  INFO 9700 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
+Start test 33?[0m
+?[0;34m2023-05-22 22:49:20.768  INFO 1460 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-22 22:49:20.769  INFO 1460 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-22 22:49:20.770  INFO 1460 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[1;31m
+Start test 34?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 35?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 36?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
 Start test 37?[0m
-?[0;34m2023-05-09 23:51:10.494  INFO 9700 --- [io-28852-exec-2] account.service.PaymentService           : adding payrolls
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
-?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: delete from users_roles where user_id_user=?
+?[0m?[0;34mHibernate: delete from users where id_user=?
 ?[1;31m
 Start test 38?[0m
-?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
 Start test 39?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
 Start test 40?[0m
-?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
 ?[1;31m
 Start test 41?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into users (email, lastname, name, password, id_user) values (?, ?, ?, ?, ?)
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
 ?[1;31m
 Start test 42?[0m
-?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
 ?[1;31m
 Start test 43?[0m
-?[0;34m2023-05-09 23:51:12.042  INFO 9700 --- [io-28852-exec-8] account.service.PaymentService           : adding payrolls
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 44?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: delete from users_roles where user_id_user=?
+?[0m?[0;34mHibernate: delete from users where id_user=?
+?[1;31m
+Start test 45?[0m
+?[0;34m2023-05-22 22:49:27.260  INFO 1460 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-05-22 22:49:27.261  INFO 1460 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+?[0m?[0;34m2023-05-22 22:49:27.567  INFO 1460 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.5.5)
+?[0m?[0;34m
+?[0m?[0;34m2023-05-22 22:49:37.742  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4 on DESKTOP-AG8QKJE with PID 1460 (started by ASUS in D:\workspace-eclipse\Account Service\Account Service\task)
+?[0m?[0;34m2023-05-22 22:49:37.742  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-05-22 22:49:38.057  INFO 1460 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-05-22 22:49:38.069  INFO 1460 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+?[0m?[0;34m2023-05-22 22:49:38.141  INFO 1460 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-05-22 22:49:38.142  INFO 1460 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-05-22 22:49:38.142  INFO 1460 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+?[0m?[0;34m2023-05-22 22:49:38.169  INFO 1460 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-05-22 22:49:38.169  INFO 1460 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 425 ms
+?[0m?[0;34m2023-05-22 22:49:38.228  INFO 1460 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-05-22 22:49:38.233  INFO 1460 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+?[0m?[0;34m2023-05-22 22:49:38.238  INFO 1460 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+?[0m?[0;34m2023-05-22 22:49:38.238  INFO 1460 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-05-22 22:49:38.304  INFO 1460 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-05-22 22:49:38.304  INFO 1460 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34m2023-05-22 22:49:38.415  INFO 1460 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23138317, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ef3f72c, org.springframework.security.web.header.HeaderWriterFilter@43941806, org.springframework.security.web.authentication.logout.LogoutFilter@62fee9c3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64f3f849, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e791e53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d4e6bb2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ace5b0e, org.springframework.security.web.session.SessionManagementFilter@4cde5d66, org.springframework.security.web.access.ExceptionTranslationFilter@491d36ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ba0b7cf]
+?[0m?[0;34m2023-05-22 22:49:38.436  WARN 1460 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-05-22 22:49:38.574  INFO 1460 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-05-22 22:49:38.587  INFO 1460 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-05-22 22:49:38.594  INFO 1460 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 0.868 seconds (JVM running for 50.287)
+?[0m?[1;31m
+Start test 46?[0m
+?[0;34m2023-05-22 22:49:38.599  INFO 1460 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-22 22:49:38.600  INFO 1460 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-05-22 22:49:38.601  INFO 1460 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 47?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: delete from users_roles where user_id_user=?
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[1;31m
+Start test 48?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 49?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: delete from users_roles where user_id_user=?
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[1;31m
+Start test 50?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 51?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[0m?[0;34mHibernate: delete from users_roles where user_id_user=?
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[0m?[0;34mHibernate: insert into users_roles (user_id_user, roles_id) values (?, ?)
+?[1;31m
+Start test 52?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[1;31m
+Start test 53?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[1;31m
+Start test 54?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[1;31m
+Start test 55?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[1;31m
+Start test 56?[0m
+?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[1;31m
+Start test 57?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select role0_.id as id1_1_, role0_.name as name2_1_ from role role0_ where role0_.name=?
+?[1;31m
+Start test 58?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[1;31m
+Start test 59?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 60?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 61?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 62?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 63?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 64?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 65?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34m2023-05-22 22:49:48.282  INFO 1460 --- [io-28852-exec-4] account.service.PaymentService           : adding payrolls
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
+?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
+?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
+?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
+?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
+?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
+?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
+?[0m?[0;34mHibernate: insert into payment (id, email, period, salary) values (null, ?, ?, ?)
+?[1;31m
+Start test 66?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[1;31m
+Start test 67?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[1;31m
+Start test 68?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 69?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[1;31m
+Start test 70?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[1;31m
+Start test 71?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+?[1;31m
+Start test 72?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34m2023-05-22 22:49:51.683  INFO 1460 --- [io-28852-exec-5] account.service.PaymentService           : adding payrolls
 ?[0m?[0;34mHibernate: select user0_.id_user as col_0_0_ from users user0_ where upper(user0_.email)=upper(?) limit ?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
 ?[1;31m
-Start test 44?[0m
-?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
+Start test 73?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
 ?[1;31m
-Start test 45?[0m
+Start test 74?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
-Start test 46?[0m
+Start test 75?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[1;31m
-Start test 47?[0m
+Start test 76?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
 ?[0m?[0;34mHibernate: update payment set email=?, period=?, salary=? where id=?
 ?[1;31m
-Start test 48?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
+Start test 77?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where user0_.email=?
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
 ?[1;31m
-Start test 49?[0m
-?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
-?[1;31m
-Start test 50?[0m
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[0m?[0;34mHibernate: update payment set email=?, period=?, salary=? where id=?
-?[1;31m
-Start test 51?[0m
-?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where payment0_.period=? and upper(payment0_.email)=upper(?)
-?[1;31m
-Start test 52?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[1;31m
-Start test 53?[0m
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where upper(user0_.email)=upper(?)
-?[0m?[0;34mHibernate: select user0_.id_user as id_user1_1_, user0_.email as email2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.password as password5_1_ from users user0_ where user0_.email=?
-?[0m?[0;34mHibernate: select payment0_.id as id1_0_, payment0_.email as email2_0_, payment0_.period as period3_0_, payment0_.salary as salary4_0_ from payment payment0_ where upper(payment0_.email)=upper(?) order by payment0_.period desc
+Start test 78?[0m
+?[0m?[0;34mHibernate: select user0_.id_user as id_user1_2_, user0_.email as email2_2_, user0_.lastname as lastname3_2_, user0_.name as name4_2_, user0_.password as password5_2_ from users user0_ where upper(user0_.email)=upper(?)
+?[0m?[0;34mHibernate: select roles0_.user_id_user as user_id_1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join role role1_ on roles0_.roles_id=role1_.id where roles0_.user_id_user=?
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

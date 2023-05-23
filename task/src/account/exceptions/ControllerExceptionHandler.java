@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import java.nio.file.AccessDeniedException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,7 +25,7 @@ import java.util.stream.Collectors;
 public class ControllerExceptionHandler {
     @ExceptionHandler(BreachedPasswordException.class)
     public ResponseEntity<CustomErrorMessage> handleFlightNotFound(
-            BreachedPasswordException e, WebRequest request) {
+            BreachedPasswordException e) {
 
         CustomErrorMessage body = new CustomErrorMessage(
                 LocalDateTime.now(),
@@ -88,4 +90,18 @@ public class ControllerExceptionHandler {
                 ((ServletWebRequest) request).getRequest().getRequestURI());
     }
 
+
+    @ExceptionHandler(AccessDeniedException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ResponseBody
+    public CustomErrorMessage handleUnauthorizedException(AccessDeniedException ex, WebRequest request) {
+
+        return new CustomErrorMessage(
+                LocalDateTime.now(),
+                HttpStatus.UNAUTHORIZED.value(),
+                "Unauthorized",
+                "Access Denied!",
+                ((ServletWebRequest) request).getRequest().getRequestURI()
+        );
+    }
 }

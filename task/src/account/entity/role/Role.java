@@ -18,7 +18,6 @@ import javax.persistence.Id;
 public class Role {
     @Id
     @GeneratedValue
-    @JsonIgnore
     private Long id;
     private String name;
 

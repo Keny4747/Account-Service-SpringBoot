@@ -1,16 +1,16 @@
 package account.security;
 
+import account.exceptions.error.CustomAccessDeniedHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
 
 @Configuration
 @EnableWebSecurity
@@ -24,26 +24,12 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        /*
-        return http
-                .csrf(AbstractHttpConfigurer::disable)
-                .authorizeRequests(auth -> {
-                    auth.antMatchers(
-                            "/api/auth/signup",
-                            "/api/auth/all",
-                            "api/acct/**",
-                            "api/admin/**").permitAll();
-                    auth.antMatchers("/api/empl/payment","api/auth/changepass").authenticated();
-                })
-                .userDetailsService(userDetailsService)
-                .httpBasic(Customizer.withDefaults())
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .build();
-         */
 
-        http.httpBasic()
+
+
+        http .exceptionHandling().accessDeniedHandler(accessDeniedHandler())
+                .and()
+                .httpBasic()
                 .and()
                 .csrf().disable().headers().frameOptions().disable() // for Postman, the H2 console
                 .and()
@@ -59,16 +45,22 @@ public class SecurityConfiguration {
                 .antMatchers(HttpMethod.DELETE, "/api/admin/user/**").hasRole("ADMINISTRATOR")
                 .antMatchers(HttpMethod.PUT, "/api/admin/user/role/**").hasRole("ADMINISTRATOR")
                 .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .permitAll()
+
                 .and()
                 .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                ;
 
         return http.build();
 
+
+
     }
+    @Bean
+    public AccessDeniedHandler accessDeniedHandler() {
+        return new CustomAccessDeniedHandler();
+    }
+
 
     @Bean
     public static PasswordEncoder passwordEncoder() {

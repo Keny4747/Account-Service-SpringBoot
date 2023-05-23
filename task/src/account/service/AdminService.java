@@ -13,6 +13,7 @@ import account.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static account.util.Operation.GRANT;
@@ -39,27 +40,27 @@ public class AdminService {
 
     public UserDeleteResponse deleteUser(String userEmail) {
 
-        User user = userRepository.findByEmail(userEmail);
-        if(user == null){
+        Optional<User> user = userRepository.findByEmailIgnoreCase(userEmail);
+        if(user.isEmpty()){
             throw new UserNotFoundException();
         }
 
-        if(user.getRoles().toString().contains(ADMIN.getValue())){
+        if(user.get().getRoles().toString().contains(ADMIN.getValue())){
             throw new AdminCanNotDeleteException();
         }
 
-        userRepository.delete(user);
+        userRepository.delete(user.get());
 
        UserDeleteResponse userDeleteResponse = new UserDeleteResponse();
        userDeleteResponse.setUser(userEmail);
        return userDeleteResponse;
     }
 
-    //TODO: finish this operation
-    public UserDTO userRoleUpdate(UserUpdate userUpdate){
-        User user = userRepository.findByEmail(userUpdate.getEmail());
 
-        if(user == null){
+    public UserDTO userRoleUpdate(UserUpdate userUpdate){
+         Optional<User> user = userRepository.findByEmailIgnoreCase(userUpdate.getEmail());
+
+        if(user.isEmpty()){
             throw new UserNotFoundException();
         }
 
@@ -72,16 +73,16 @@ public class AdminService {
         //DELETE OPERATION:
         if(userUpdate.getOperation().equals(REMOVE.name())){
 
-            if(user.getRoles().toString().contains(userUpdate.getRole())){
+            if(user.get().getRoles().toString().contains(userUpdate.getRole())){
 
-                if(user.getRoles().toString().contains(ADMIN.getValue())){
+                if(user.get().getRoles().toString().contains(ADMIN.getValue())){
                     throw new RoleCustomException("Can't remove ADMINISTRATOR role!");
                 }
-                if(user.getRoles().size()==1){
+                if(user.get().getRoles().size()==1){
                     throw new RoleCustomException("The user must have at least one role!");
                 }
-                user.getRoles().remove(roleRepository.findByName(roleUser).orElseThrow());
-                userRepository.save(user);
+                user.get().getRoles().remove(roleRepository.findByName(roleUser).orElseThrow());
+                userRepository.save(user.get());
             }else {
                 throw new RoleCustomException("The user does not have a role!");
             }
@@ -90,13 +91,16 @@ public class AdminService {
         //GRANT OPERATION
         if(userUpdate.getOperation().equals(GRANT.name())){
 
+            if(user.get().getRoles().toString().contains(ADMIN.getValue())){
+                throw new RoleCustomException("The user cannot combine administrative and business roles!");
+            }
             if(roleUser.equals(ADMIN.getValue())){
                 throw new RoleCustomException("The user cannot combine administrative and business roles!");
             }
-            user.getRoles().add(roleRepository.findByName(roleUser).orElseThrow());
-            userRepository.save(user);
+            user.get().getRoles().add(roleRepository.findByName(roleUser).orElseThrow());
+            userRepository.save(user.get());
         }
 
-        return new UserDTO(user);
+        return new UserDTO(user.get());
     }
 }

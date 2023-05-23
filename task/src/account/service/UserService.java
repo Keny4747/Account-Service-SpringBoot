@@ -1,10 +1,9 @@
 package account.service;
 
 import account.dto.UserDTO;
+import account.entity.User;
 import account.entity.password.NewPassword;
 import account.entity.password.PasswordResponse;
-import account.entity.User;
-import account.entity.role.Role;
 import account.exceptions.BreachedPasswordException;
 import account.exceptions.UnauthorizedException;
 import account.exceptions.UserExistException;
@@ -13,16 +12,13 @@ import account.repository.BreachedPasswordsRepository;
 import account.repository.RoleRepository;
 import account.repository.UserRepository;
 import account.security.UserDetailsImpl;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -46,7 +42,6 @@ public class UserService {
 
     public ResponseEntity<UserDTO> registerAccount(User userRequest) {
 
-        //TODO: check changes
         if(userRepository.findAll().isEmpty()){
             userRequest.setRoles(new ArrayList<>(Set.of(roleRepository.findByName("ROLE_ADMINISTRATOR").orElseThrow())));
         }else {

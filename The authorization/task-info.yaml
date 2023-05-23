@@ -2017,9 +2017,6 @@ files:
 - name: src/account/exceptions/RoleNotFoundException.java
   visible: true
   learner_created: true
-- name: src/account/exceptions/AdminRoleException.java
-  visible: true
-  learner_created: true
 - name: src/account/exceptions/RoleCustomException.java
   visible: true
   learner_created: true
@@ -2029,6 +2026,12 @@ files:
 - name: src/account/util/RoleAssignment.java
   visible: true
   learner_created: true
+- name: src/account/exceptions/error/CustomAccessDeniedHandler.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16605#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 23 May 2023 03:49:55 UTC"
 record: -1

@@ -48,8 +48,8 @@ public class User {
     @Size(min = 12, message ="Password length must be 12 chars minimum!")
     private String password;
 
-    //TODO: check this changes
-    @JsonIgnore
+
+
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
 
@@ -65,4 +65,5 @@ public class User {
     public int hashCode() {
         return getClass().hashCode();
     }
+
 }
